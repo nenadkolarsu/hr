@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="koverteZupaVelika" pageWidth="709" pageHeight="501" orientation="Landscape" columnWidth="643" leftMargin="33" rightMargin="33" topMargin="28" bottomMargin="33" uuid="30a273d3-394a-4987-901f-c8c70b5ddc25">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="198"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     zupa.`id` AS zupa_id,
+     zupa.`pak` AS zupa_pak,
+     zupa.`telefon` AS zupa_telefon,
+     zupa.`fax` AS zupa_fax,
+     zupa.`email` AS zupa_email,
+     zupa.`web` AS zupa_web,
+     zupa.`sifra` AS zupa_sifra,
+     zupa.`naziv` AS zupa_naziv,
+     zupa.`jezicnost` AS zupa_jezicnost,
+     zupa.`arhiprezbiterat` AS zupa_arhiprezbiterat,
+     zupa.`dekanat` AS zupa_dekanat,
+     zupa.`oslovljavanje` AS zupa_oslovljavanje,
+     zupa.`titul_zupe` AS zupa_titul_zupe,
+     zupa.`adresa` AS zupa_adresa,
+     zupa.`ptt_broj` AS zupa_ptt_broj,
+     zupa.`mesto` AS zupa_mesto,
+     zupa.`zupnik` AS zupa_zupnik,
+     zupa.`aktivan` AS zupa_aktivan
+FROM
+     `zupa` zupa
+WHERE zupa.`aktivan`]]>
+	</queryString>
+	<field name="zupa_id" class="java.lang.Integer"/>
+	<field name="zupa_pak" class="java.lang.String"/>
+	<field name="zupa_telefon" class="java.lang.String"/>
+	<field name="zupa_fax" class="java.lang.String"/>
+	<field name="zupa_email" class="java.lang.String"/>
+	<field name="zupa_web" class="java.lang.String"/>
+	<field name="zupa_sifra" class="java.lang.String"/>
+	<field name="zupa_naziv" class="java.lang.String"/>
+	<field name="zupa_jezicnost" class="java.lang.String"/>
+	<field name="zupa_arhiprezbiterat" class="java.lang.String"/>
+	<field name="zupa_dekanat" class="java.lang.String"/>
+	<field name="zupa_oslovljavanje" class="java.lang.String"/>
+	<field name="zupa_titul_zupe" class="java.lang.String"/>
+	<field name="zupa_adresa" class="java.lang.String"/>
+	<field name="zupa_ptt_broj" class="java.lang.String"/>
+	<field name="zupa_mesto" class="java.lang.String"/>
+	<field name="zupa_zupnik" class="java.lang.String"/>
+	<field name="zupa_aktivan" class="java.lang.Boolean"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="440" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="229" height="86" uuid="26921755-e339-4ba7-9576-5e168c4a561f"/>
+				<textElement>
+					<font fontName="Arial" pdfEncoding="Cp1250"/>
+				</textElement>
+				<text><![CDATA[Subotička biskupija – Szabadkai Egyházmegye
+Trg svete Terezije 3
+SRB - 24000 SUBOTICA - 450521
+Tel: + 381 (0)24/ 553-610
+Fax: + 381 (0)24/ 552-497
+E-mail: subisk@tippnet.rs]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="401" y="304" width="169" height="20" uuid="7da009da-6d44-4ec0-b8d5-d3805259691a"/>
+				<textElement>
+					<font fontName="Arial" size="14" pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{zupa_oslovljavanje}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="401" y="324" width="169" height="20" uuid="061cb913-7751-40b8-a1d0-08eb5b7c640a"/>
+				<textElement>
+					<font fontName="Arial" size="14" pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{zupa_naziv}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="401" y="344" width="169" height="20" uuid="6d878382-e5c9-44de-bc44-b90b45d8758b"/>
+				<textElement>
+					<font fontName="Arial" size="14" pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{zupa_adresa}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="401" y="364" width="57" height="20" uuid="2f43b38b-5d5c-47a3-bba8-192e16e76a98"/>
+				<textElement>
+					<font fontName="Arial" size="14" pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{zupa_ptt_broj}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="458" y="364" width="112" height="20" uuid="d11c085b-e21f-4bc8-afa2-3dab3992bcfe"/>
+				<textElement>
+					<font fontName="Arial" size="14" pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{zupa_mesto}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="437" y="386" width="133" height="20" uuid="c130db03-97b9-450e-bf63-f34baa603b45"/>
+				<textElement>
+					<font fontName="Arial" size="14" pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{zupa_pak}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="401" y="386" width="38" height="20" uuid="8fdf8116-2c2e-4367-aa09-ee6be6aa84c9"/>
+				<textElement>
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<text><![CDATA[PAK]]></text>
+			</staticText>
+			<break>
+				<reportElement x="0" y="420" width="100" height="1" uuid="ddba6370-f264-4530-883a-c8650412ee77"/>
+			</break>
+		</band>
+	</detail>
+</jasperReport>

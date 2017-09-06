@@ -1,0 +1,6 @@
+dodati u zupe
+
+oslovljavanje_koverta
+oslovljavanje_zupnika_koverta
+tip_zupe
+napomena

@@ -1,0 +1,201 @@
+INSERT INTO `opstina`(``sifra`, `naziv`) VALUES ('201','Ada');
+INSERT INTO `opstina`(``sifra`, `naziv`) VALUES ('201','Ada');
+
+1. 	  	Ada 	  	201
+2. 	  	Aleksandrovac 	  	001
+3. 	  	Aleksinac 	  	002
+4. 	  	Alibunar 	  	202
+5. 	  	Apatin 	  	203
+6. 	  	Aranđelovac 	  	003
+7. 	  	Arilje 	  	004
+8. 	  	Babušnica 	  	006
+9. 	  	Bajina Bašta 	  	007
+10. 	  	Barajevo 	  	010
+11. 	  	Batočina 	  	008
+12. 	  	Bač 	  	204
+13. 	  	Bačka Palanka 	  	205
+14. 	  	Bačka Topola 	  	206
+15. 	  	Bački Petrovac 	  	207
+16. 	  	Bela Palanka 	  	009
+17. 	  	Bela Crkva 	  	209
+18. 	  	Beočin 	  	210
+19. 	  	Bečej 	  	208
+20. 	  	Blace 	  	023
+21. 	  	Bogatić 	  	024
+22. 	  	Bojnik 	  	025
+23. 	  	Boljevac 	  	026
+24. 	  	Bor 	  	027
+25. 	  	Bosilegrad 	  	028
+26. 	  	Brus 	  	029
+27. 	  	Bujanovac 	  	030
+28. 	  	Valjevo 	  	107
+29. 	  	Varvarin 	  	108
+30. 	  	Velika Plana 	  	109
+31. 	  	Veliko Gradište 	  	110
+32. 	  	Vitina 	  	321
+33. 	  	Vladimirci 	  	112
+34 	  	Vladičin Han 	  	111
+35 	  	Vlasotince 	  	113
+36 	  	Voždovac 	  	019
+37 	  	Vranje 	  	114
+38 	  	Vračar 	  	020
+39 	  	Vrbas 	  	240
+40 	  	Vrnjačka Banja 	  	115
+41 	  	Vršac 	  	241
+42 	  	Vučitrn 	  	322
+43 	  	Gadžin Han 	  	039
+44 	  	Glogovac 	  	304
+45 	  	Gnjilane 	  	305
+46 	  	Golubac 	  	040
+47 	  	Gora 	  	331
+48 	  	Gornji Milanovac 	  	041
+49 	  	Grocka 	  	012
+50 	  	Despotovac 	  	036
+51 	  	Dečani 	  	301
+52 	  	Dimitrovgrad 	  	037
+53 	  	Doljevac 	  	038
+54 	  	Đakovica 	  	303
+55 	  	Žabalj 	  	243
+56 	  	Žabari 	  	117
+57 	  	Žagubica 	  	118
+58 	  	Žitište 	  	244
+59 	  	Žitorađa 	  	119
+60 	  	Zaječar 	  	116
+61 	  	Zvezdara 	  	022
+62 	  	Zvečan 	  	330
+63 	  	Zemun 	  	021
+64 	  	Zrenjanin 	  	242
+65 	  	Zubin Potok 	  	324
+66 	  	Ivanjica 	  	042
+67 	  	Inđija 	  	212
+68 	  	Irig 	  	213
+69 	  	Istok 	  	306
+70 	  	Jagodina 	  	096
+71 	  	Kanjiža 	  	214
+72 	  	Kačanik 	  	307
+73 	  	Kikinda 	  	215
+74 	  	Kladovo 	  	043
+75 	  	Klina 	  	308
+76 	  	Knić 	  	044
+77 	  	Knjaževac 	  	045
+78 	  	Kovačica 	  	216
+79 	  	Kovin 	  	217
+80 	  	Kosjerić 	  	048
+81 	  	Kosovo Polje 	  	328
+82 	  	Kosovska Kamenica 	  	309
+83 	  	Kosovska Mitrovica 	  	310
+84 	  	Koceljeva 	  	046
+85 	  	Kragujevac 	  	049
+86 	  	Kraljevo 	  	050
+87 	  	Krupanj 	  	051
+88 	  	Kruševac 	  	052
+89 	  	Kula 	  	218
+90 	  	Kuršumlija 	  	054
+91 	  	Kučevo 	  	053
+92 	  	Lazarevac 	  	056
+93 	  	Lajkovac 	  	055
+94 	  	Lapovo 	  	121
+95 	  	Lebane 	  	057
+96 	  	Leposavić 	  	311
+97 	  	Leskovac 	  	058
+98 	  	Lipljan 	  	312
+99 	  	Loznica 	  	059
+100 	  	Lučani 	  	060
+101 	  	Lučani 	  	060
+102 	  	Ljig 	  	061
+103 	  	Ljubovija 	  	062
+104 	  	Majdanpek 	  	063
+105 	  	Majdanpek 	  	063
+106 	  	Mali Zvornik 	  	065
+107 	  	Mali Iđoš 	  	219
+108 	  	Malo Crniće 	  	066
+109 	  	Medveđa 	  	067
+110 	  	Mediana 	  	128
+111 	  	Merošina 	  	068
+112 	  	Mionica 	  	069
+113 	  	Mladenovac 	  	070
+114 	  	Negotin 	  	072
+115 	  	Niška Banja 	  	122
+116 	  	Nova Varoš 	  	074
+117 	  	Nova Crnja 	  	220
+118. 	  	Novi Beograd 	  	013
+119. 	  	Novi Bečej 	  	221
+120. 	  	Novi Kneževac 	  	222
+121. 	  	Novi Pazar 	  	075
+122. 	  	Novi Sad 	  	223
+123. 	  	Novo Brdo 	  	329
+124. 	  	Obilić 	  	327
+125. 	  	Obrenovac 	  	014
+126. 	  	Opovo 	  	225
+127. 	  	Orahovac 	  	313
+128. 	  	Osečina 	  	076
+129. 	  	Odžaci 	  	224
+130. 	  	Palilula 	  	015
+131. 	  	Palilula (Niš) 	  	127
+132. 	  	Pantelej 	  	125
+133. 	  	Pančevo 	  	226
+134. 	  	Paraćin 	  	077
+135. 	  	Petrovaradin 	  	247
+136. 	  	Petrovac na Mlavi 	  	078
+137. 	  	Peć 	  	314
+138. 	  	Pećinci 	  	227
+139. 	  	Pirot 	  	079
+140. 	  	Plandište 	  	228
+141. 	  	Podujevo 	  	315
+142. 	  	Požarevac 	  	080
+143. 	  	Požega 	  	081
+144. 	  	Preševo 	  	082
+145. 	  	Priboj na Limu 	  	083
+146. 	  	Prizren 	  	317
+147. 	  	Prijepolje 	  	084
+148. 	  	Priština 	  	316
+149. 	  	Prokuplje 	  	085
+150. 	  	Ražanj 	  	088
+151. 	  	Rakovica 	  	120
+152. 	  	Rača 	  	086
+153. 	  	Raška 	  	087
+154. 	  	Rekovac 	  	089
+155. 	  	Ruma 	  	229
+156. 	  	Savski venac                                    	  	016
+157. 	  	Svilajnac 	  	097
+158. 	  	Svrljig 	  	098
+159.  	  	Senta 	  	231
+160 	  	Sečanj 	  	230
+161 	  	Sjenica 	  	091
+162 	  	Smederevo 	  	092
+163 	  	Smederevska Palanka 	  	093
+164 	  	Sokobanja 	  	094
+165 	  	Sombor 	  	232
+166 	  	Sopot 	  	017
+167 	  	Srbica 	  	318
+168 	  	Srbobran 	  	233
+169 	  	Sremska Mitrovica 	  	234
+170 	  	Sremski Karlovci 	  	250
+171 	  	Stara Pazova 	  	235
+172 	  	Stari grad 	  	018
+173 	  	Stragari 	  	123
+174 	  	Subotica 	  	236
+175 	  	Suva Reka 	  	319
+176 	  	Surdulica 	  	095
+177 	  	Surčin 	  	124
+178 	  	Temerin 	  	238
+179 	  	Titel 	  	239
+180 	  	Topola 	  	101
+181 	  	Trgovište 	  	102
+182 	  	Trstenik 	  	103
+183 	  	Tutin 	  	104
+184 	  	Ćićevac 	  	032
+185 	  	Ćuprija 	  	033
+186 	  	Ub 	  	105
+187 	  	Užice 	  	100
+188 	  	Uroševac 	  	320
+189 	  	Crveni krst 	  	126
+190 	  	Crna Trava 	  	031
+191 	  	Čajetina 	  	035
+192 	  	Čačak 	  	034
+193 	  	Čoka 	  	211
+194 	  	Čukarica 	  	011
+195 	  	Šabac 	  	099
+196 	  	Šid 	  	237
+197 	  	Štimlje 	  	325
+198 	  	Štrpce 	  	326

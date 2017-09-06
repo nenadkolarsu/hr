@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="karton" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2dd5d99d-afd5-4e50-ad97-7dad33c0bab6">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="id" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[27]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Users\\ms\\Documents\\NetBeansProjects\\gui\\src\\report\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     licni_podaci.`id` AS licni_podaci_id,
+     licni_podaci.`oslovljavanje_sifra` AS licni_podaci_oslovljavanje_sifra,
+     licni_podaci.`oslovljavanje_id` AS licni_podaci_oslovljavanje_id,
+     licni_podaci.`oslovljavanje` AS licni_podaci_oslovljavanje,
+     licni_podaci.`crkvena_titula_sifra` AS licni_podaci_crkvena_titula_sifra,
+     licni_podaci.`crkvena_titula_id` AS licni_podaci_crkvena_titula_id,
+     licni_podaci.`crkvena_titula` AS licni_podaci_crkvena_titula,
+     licni_podaci.`akademska_titula_sifra` AS licni_podaci_akademska_titula_sifra,
+     licni_podaci.`akademska_titula_id` AS licni_podaci_akademska_titula_id,
+     licni_podaci.`akademska_titula` AS licni_podaci_akademska_titula,
+     licni_podaci.`jmbg` AS licni_podaci_jmbg,
+     licni_podaci.`ime` AS licni_podaci_ime,
+     licni_podaci.`prezime` AS licni_podaci_prezime,
+     licni_podaci.`ime_u_lk` AS licni_podaci_ime_u_lk,
+     licni_podaci.`prezime_u_lk` AS licni_podaci_prezime_u_lk,
+     licni_podaci.`ime_oca` AS licni_podaci_ime_oca,
+     licni_podaci.`ime_majke` AS licni_podaci_ime_majke,
+     licni_podaci.`datum_rodjenja` AS licni_podaci_datum_rodjenja,
+     licni_podaci.`mesto_rodjenja_id` AS licni_podaci_mesto_rodjenja_id,
+     licni_podaci.`mesto_rodjenja` AS licni_podaci_mesto_rodjenja,
+     licni_podaci.`mesto_rodjenja_sifra` AS licni_podaci_mesto_rodjenja_sifra,
+     licni_podaci.`srednje_obrazovanje_mesto_id` AS licni_podaci_srednje_obrazovanje_mesto_id,
+     licni_podaci.`srednje_obrazovanje_mesto_sifra` AS licni_podaci_srednje_obrazovanje_mesto_sifra,
+     licni_podaci.`srednje_obrazovanje_mesto` AS licni_podaci_srednje_obrazovanje_mesto,
+     licni_podaci.`srednje_obrazovanje_skola_id` AS licni_podaci_srednje_obrazovanje_skola_id,
+     licni_podaci.`srednje_obrazovanje_skola_sifra` AS licni_podaci_srednje_obrazovanje_skola_sifra,
+     licni_podaci.`srednje_obrazovanje_skola` AS licni_podaci_srednje_obrazovanje_skola,
+     licni_podaci.`srednje_obrazovanje_od` AS licni_podaci_srednje_obrazovanje_od,
+     licni_podaci.`srednje_obrazovanje_do` AS licni_podaci_srednje_obrazovanje_do,
+     licni_podaci.`brprotokola` AS licni_podaci_brprotokola,
+     licni_podaci.`pol` AS licni_podaci_pol,
+     licni_podaci.`drzavarodj` AS licni_podaci_drzavarodj,
+     licni_podaci.`id_drzavarodj` AS licni_podaci_id_drzavarodj,
+     licni_podaci.`adresa` AS licni_podaci_adresa,
+     licni_podaci.`ptt` AS licni_podaci_ptt,
+     licni_podaci.`id_ptt` AS licni_podaci_id_ptt,
+     licni_podaci.`telefon` AS licni_podaci_telefon,
+     licni_podaci.`e_mail` AS licni_podaci_e_mail,
+     licni_podaci.`status` AS licni_podaci_status,
+     licni_podaci.`id_status` AS licni_podaci_id_status,
+     licni_podaci.`drzavljanstvo` AS licni_podaci_drzavljanstvo,
+     licni_podaci.`id_drzavljanstvo` AS licni_podaci_id_drzavljanstvo,
+     licni_podaci.`nacionalnost` AS licni_podaci_nacionalnost,
+     licni_podaci.`id_nacionalnost` AS licni_podaci_id_nacionalnost,
+     licni_podaci.`slika` AS licni_podaci_slika,
+     licni_podaci.`banka_isplata` AS licni_podaci_banka_isplata,
+     licni_podaci.`id_banka_isplata` AS licni_podaci_id_banka_isplata,
+     licni_podaci.`racun_isplate` AS licni_podaci_racun_isplate,
+     licni_podaci.`opstina` AS licni_podaci_opstina,
+     licni_podaci.`id_opstina` AS licni_podaci_id_opstina,
+     licni_podaci.`sifra` AS licni_podaci_sifra,
+     licni_podaci.`bogoslovija_mesto_id` AS licni_podaci_bogoslovija_mesto_id,
+     licni_podaci.`bogoslovija_mesto_sifra` AS licni_podaci_bogoslovija_mesto_sifra,
+     licni_podaci.`bogoslovija_mesto` AS licni_podaci_bogoslovija_mesto,
+     licni_podaci.`bogoslovija_mesto1_id` AS licni_podaci_bogoslovija_mesto1_id,
+     licni_podaci.`bogoslovija_mesto1_sifra` AS licni_podaci_bogoslovija_mesto1_sifra,
+     licni_podaci.`bogoslovija_mesto1` AS licni_podaci_bogoslovija_mesto1,
+     licni_podaci.`bogoslovija_mesto2_id` AS licni_podaci_bogoslovija_mesto2_id,
+     licni_podaci.`bogoslovija_mesto2_sifra` AS licni_podaci_bogoslovija_mesto2_sifra,
+     licni_podaci.`bogoslovija_mesto2` AS licni_podaci_bogoslovija_mesto2,
+     licni_podaci.`bogoslovija_period_od` AS licni_podaci_bogoslovija_period_od,
+     licni_podaci.`bogoslovija_period_do` AS licni_podaci_bogoslovija_period_do,
+     licni_podaci.`bogoslovija_period_od1` AS licni_podaci_bogoslovija_period_od1,
+     licni_podaci.`bogoslovija_period_do1` AS licni_podaci_bogoslovija_period_do1,
+     licni_podaci.`bogoslovija_period_od2` AS licni_podaci_bogoslovija_period_od2,
+     licni_podaci.`bogoslovija_period_do2` AS licni_podaci_bogoslovija_period_do2,
+     licni_podaci.`djakonat_mesto_id` AS licni_podaci_djakonat_mesto_id,
+     licni_podaci.`djakonat_mesto_sifra` AS licni_podaci_djakonat_mesto_sifra,
+     licni_podaci.`djakonat_mesto` AS licni_podaci_djakonat_mesto,
+     licni_podaci.`djakonat_datum` AS licni_podaci_djakonat_datum,
+     licni_podaci.`djakonat_zareditelj_id` AS licni_podaci_djakonat_zareditelj_id,
+     licni_podaci.`djakonat_zareditelj_sifra` AS licni_podaci_djakonat_zareditelj_sifra,
+     licni_podaci.`djakonat_zareditelj` AS licni_podaci_djakonat_zareditelj,
+     licni_podaci.`prezbiterat_mesto_id` AS licni_podaci_prezbiterat_mesto_id,
+     licni_podaci.`prezbiterat_mesto_sifra` AS licni_podaci_prezbiterat_mesto_sifra,
+     licni_podaci.`prezbiterat_mesto` AS licni_podaci_prezbiterat_mesto,
+     licni_podaci.`prezbiterat_datum` AS licni_podaci_prezbiterat_datum,
+     licni_podaci.`prezbiterat_zareditelj_id` AS licni_podaci_prezbiterat_zareditelj_id,
+     licni_podaci.`prezbiterat_zareditelj_sifra` AS licni_podaci_prezbiterat_zareditelj_sifra,
+     licni_podaci.`prezbiterat_zareditelj` AS licni_podaci_prezbiterat_zareditelj,
+     licni_podaci.`dodiplomski_studij_mesto_id` AS licni_podaci_dodiplomski_studij_mesto_id,
+     licni_podaci.`dodiplomski_studij_mesto_sifra` AS licni_podaci_dodiplomski_studij_mesto_sifra,
+     licni_podaci.`dodiplomski_studij_mesto` AS licni_podaci_dodiplomski_studij_mesto,
+     licni_podaci.`dodiplomski_studij_naziv_ustanove_id` AS licni_podaci_dodiplomski_studij_naziv_ustanove_id,
+     licni_podaci.`dodiplomski_studij_naziv_ustanove_sifra` AS licni_podaci_dodiplomski_studij_naziv_ustanove_sifra,
+     licni_podaci.`dodiplomski_studij_naziv_ustanove` AS licni_podaci_dodiplomski_studij_naziv_ustanove,
+     licni_podaci.`dodiplomski_studij_period_od` AS licni_podaci_dodiplomski_studij_period_od,
+     licni_podaci.`dodiplomski_studij_period_do` AS licni_podaci_dodiplomski_studij_period_do,
+     licni_podaci.`magisterij_mesto_id` AS licni_podaci_magisterij_mesto_id,
+     licni_podaci.`magisterij_mesto_sifra` AS licni_podaci_magisterij_mesto_sifra,
+     licni_podaci.`magisterij_mesto` AS licni_podaci_magisterij_mesto,
+     licni_podaci.`magisterij_naziv_ustanove_id` AS licni_podaci_magisterij_naziv_ustanove_id,
+     licni_podaci.`magisterij_naziv_ustanove_sifra` AS licni_podaci_magisterij_naziv_ustanove_sifra,
+     licni_podaci.`magisterij_naziv_ustanove` AS licni_podaci_magisterij_naziv_ustanove,
+     licni_podaci.`magisterij_period_od` AS licni_podaci_magisterij_period_od,
+     licni_podaci.`magisterij_period_do` AS licni_podaci_magisterij_period_do,
+     licni_podaci.`doktorat_mesto_id` AS licni_podaci_doktorat_mesto_id,
+     licni_podaci.`doktorat_mesto_sifra` AS licni_podaci_doktorat_mesto_sifra,
+     licni_podaci.`doktorat_mesto` AS licni_podaci_doktorat_mesto,
+     licni_podaci.`doktorat_naziv_ustanove_id` AS licni_podaci_doktorat_naziv_ustanove_id,
+     licni_podaci.`doktorat_naziv_ustanove_sifra` AS licni_podaci_doktorat_naziv_ustanove_sifra,
+     licni_podaci.`doktorat_naziv_ustanove` AS licni_podaci_doktorat_naziv_ustanove,
+     licni_podaci.`doktorat_period_od` AS licni_podaci_doktorat_period_od,
+     licni_podaci.`doktorat_period_do` AS licni_podaci_doktorat_period_do
+FROM
+     `licni_podaci` licni_podaci
+WHERE id = $P{id}]]>
+	</queryString>
+	<field name="licni_podaci_id" class="java.lang.Integer"/>
+	<field name="licni_podaci_oslovljavanje_sifra" class="java.lang.Integer"/>
+	<field name="licni_podaci_oslovljavanje_id" class="java.lang.Integer"/>
+	<field name="licni_podaci_oslovljavanje" class="java.lang.String"/>
+	<field name="licni_podaci_crkvena_titula_sifra" class="java.lang.Integer"/>
+	<field name="licni_podaci_crkvena_titula_id" class="java.lang.Integer"/>
+	<field name="licni_podaci_crkvena_titula" class="java.lang.String"/>
+	<field name="licni_podaci_akademska_titula_sifra" class="java.lang.Integer"/>
+	<field name="licni_podaci_akademska_titula_id" class="java.lang.Integer"/>
+	<field name="licni_podaci_akademska_titula" class="java.lang.String"/>
+	<field name="licni_podaci_jmbg" class="java.lang.String"/>
+	<field name="licni_podaci_ime" class="java.lang.String"/>
+	<field name="licni_podaci_prezime" class="java.lang.String"/>
+	<field name="licni_podaci_ime_u_lk" class="java.lang.String"/>
+	<field name="licni_podaci_prezime_u_lk" class="java.lang.String"/>
+	<field name="licni_podaci_ime_oca" class="java.lang.String"/>
+	<field name="licni_podaci_ime_majke" class="java.lang.String"/>
+	<field name="licni_podaci_datum_rodjenja" class="java.sql.Date"/>
+	<field name="licni_podaci_mesto_rodjenja_id" class="java.lang.Integer"/>
+	<field name="licni_podaci_mesto_rodjenja" class="java.lang.String"/>
+	<field name="licni_podaci_mesto_rodjenja_sifra" class="java.lang.Integer"/>
+	<field name="licni_podaci_srednje_obrazovanje_mesto_id" class="java.lang.Integer"/>
+	<field name="licni_podaci_srednje_obrazovanje_mesto_sifra" class="java.lang.Integer"/>
+	<field name="licni_podaci_srednje_obrazovanje_mesto" class="java.lang.String"/>
+	<field name="licni_podaci_srednje_obrazovanje_skola_id" class="java.lang.Integer"/>
+	<field name="licni_podaci_srednje_obrazovanje_skola_sifra" class="java.lang.Integer"/>
+	<field name="licni_podaci_srednje_obrazovanje_skola" class="java.lang.String"/>
+	<field name="licni_podaci_srednje_obrazovanje_od" class="java.lang.String"/>
+	<field name="licni_podaci_srednje_obrazovanje_do" class="java.lang.String"/>
+	<field name="licni_podaci_brprotokola" class="java.lang.String"/>
+	<field name="licni_podaci_pol" class="java.lang.String"/>
+	<field name="licni_podaci_drzavarodj" class="java.lang.String"/>
+	<field name="licni_podaci_id_drzavarodj" class="java.lang.String"/>
+	<field name="licni_podaci_adresa" class="java.lang.String"/>
+	<field name="licni_podaci_ptt" class="java.lang.String"/>
+	<field name="licni_podaci_id_ptt" class="java.lang.Integer"/>
+	<field name="licni_podaci_telefon" class="java.lang.String"/>
+	<field name="licni_podaci_e_mail" class="java.lang.String"/>
+	<field name="licni_podaci_status" class="java.lang.String"/>
+	<field name="licni_podaci_id_status" class="java.lang.Integer"/>
+	<field name="licni_podaci_drzavljanstvo" class="java.lang.String"/>
+	<field name="licni_podaci_id_drzavljanstvo" class="java.lang.Integer"/>
+	<field name="licni_podaci_nacionalnost" class="java.lang.String"/>
+	<field name="licni_podaci_id_nacionalnost" class="java.lang.Integer"/>
+	<field name="licni_podaci_slika" class="java.lang.String"/>
+	<field name="licni_podaci_banka_isplata" class="java.lang.String"/>
+	<field name="licni_podaci_id_banka_isplata" class="java.lang.Integer"/>
+	<field name="licni_podaci_racun_isplate" class="java.lang.String"/>
+	<field name="licni_podaci_opstina" class="java.lang.String"/>
+	<field name="licni_podaci_id_opstina" class="java.lang.Integer"/>
+	<field name="licni_podaci_sifra" class="java.lang.String"/>
+	<field name="licni_podaci_bogoslovija_mesto_id" class="java.lang.Integer"/>
+	<field name="licni_podaci_bogoslovija_mesto_sifra" class="java.lang.String"/>
+	<field name="licni_podaci_bogoslovija_mesto" class="java.lang.String"/>
+	<field name="licni_podaci_bogoslovija_mesto1_id" class="java.lang.Integer"/>
+	<field name="licni_podaci_bogoslovija_mesto1_sifra" class="java.lang.String"/>
+	<field name="licni_podaci_bogoslovija_mesto1" class="java.lang.String"/>
+	<field name="licni_podaci_bogoslovija_mesto2_id" class="java.lang.Integer"/>
+	<field name="licni_podaci_bogoslovija_mesto2_sifra" class="java.lang.String"/>
+	<field name="licni_podaci_bogoslovija_mesto2" class="java.lang.String"/>
+	<field name="licni_podaci_bogoslovija_period_od" class="java.lang.String"/>
+	<field name="licni_podaci_bogoslovija_period_do" class="java.lang.String"/>
+	<field name="licni_podaci_bogoslovija_period_od1" class="java.lang.String"/>
+	<field name="licni_podaci_bogoslovija_period_do1" class="java.lang.String"/>
+	<field name="licni_podaci_bogoslovija_period_od2" class="java.lang.String"/>
+	<field name="licni_podaci_bogoslovija_period_do2" class="java.lang.String"/>
+	<field name="licni_podaci_djakonat_mesto_id" class="java.lang.Integer"/>
+	<field name="licni_podaci_djakonat_mesto_sifra" class="java.lang.String"/>
+	<field name="licni_podaci_djakonat_mesto" class="java.lang.String"/>
+	<field name="licni_podaci_djakonat_datum" class="java.sql.Date"/>
+	<field name="licni_podaci_djakonat_zareditelj_id" class="java.lang.Integer"/>
+	<field name="licni_podaci_djakonat_zareditelj_sifra" class="java.lang.String"/>
+	<field name="licni_podaci_djakonat_zareditelj" class="java.lang.String"/>
+	<field name="licni_podaci_prezbiterat_mesto_id" class="java.lang.Integer"/>
+	<field name="licni_podaci_prezbiterat_mesto_sifra" class="java.lang.String"/>
+	<field name="licni_podaci_prezbiterat_mesto" class="java.lang.String"/>
+	<field name="licni_podaci_prezbiterat_datum" class="java.sql.Date"/>
+	<field name="licni_podaci_prezbiterat_zareditelj_id" class="java.lang.Integer"/>
+	<field name="licni_podaci_prezbiterat_zareditelj_sifra" class="java.lang.String"/>
+	<field name="licni_podaci_prezbiterat_zareditelj" class="java.lang.String"/>
+	<field name="licni_podaci_dodiplomski_studij_mesto_id" class="java.lang.Integer"/>
+	<field name="licni_podaci_dodiplomski_studij_mesto_sifra" class="java.lang.String"/>
+	<field name="licni_podaci_dodiplomski_studij_mesto" class="java.lang.String"/>
+	<field name="licni_podaci_dodiplomski_studij_naziv_ustanove_id" class="java.lang.Integer"/>
+	<field name="licni_podaci_dodiplomski_studij_naziv_ustanove_sifra" class="java.lang.String"/>
+	<field name="licni_podaci_dodiplomski_studij_naziv_ustanove" class="java.lang.String"/>
+	<field name="licni_podaci_dodiplomski_studij_period_od" class="java.lang.String"/>
+	<field name="licni_podaci_dodiplomski_studij_period_do" class="java.lang.String"/>
+	<field name="licni_podaci_magisterij_mesto_id" class="java.lang.Integer"/>
+	<field name="licni_podaci_magisterij_mesto_sifra" class="java.lang.String"/>
+	<field name="licni_podaci_magisterij_mesto" class="java.lang.String"/>
+	<field name="licni_podaci_magisterij_naziv_ustanove_id" class="java.lang.Integer"/>
+	<field name="licni_podaci_magisterij_naziv_ustanove_sifra" class="java.lang.String"/>
+	<field name="licni_podaci_magisterij_naziv_ustanove" class="java.lang.String"/>
+	<field name="licni_podaci_magisterij_period_od" class="java.lang.String"/>
+	<field name="licni_podaci_magisterij_period_do" class="java.lang.String"/>
+	<field name="licni_podaci_doktorat_mesto_id" class="java.lang.Integer"/>
+	<field name="licni_podaci_doktorat_mesto_sifra" class="java.lang.String"/>
+	<field name="licni_podaci_doktorat_mesto" class="java.lang.String"/>
+	<field name="licni_podaci_doktorat_naziv_ustanove_id" class="java.lang.Integer"/>
+	<field name="licni_podaci_doktorat_naziv_ustanove_sifra" class="java.lang.String"/>
+	<field name="licni_podaci_doktorat_naziv_ustanove" class="java.lang.String"/>
+	<field name="licni_podaci_doktorat_period_od" class="java.lang.String"/>
+	<field name="licni_podaci_doktorat_period_do" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="26" splitType="Stretch">
+			<staticText>
+				<reportElement x="172" y="0" width="235" height="23" uuid="f96ad86e-f1b2-44e0-bed7-7379343992d8"/>
+				<textElement>
+					<font fontName="Verdana" size="16"/>
+				</textElement>
+				<text><![CDATA[Osobni podaci o svećeniku]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="587" splitType="Stretch">
+			<textField>
+				<reportElement x="80" y="11" width="56" height="20" uuid="1ed23255-4a33-4d60-8861-fc1f7554f77a"/>
+				<textFieldExpression><![CDATA[$F{licni_podaci_id}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="36" y="11" width="42" height="20" uuid="9136d4a4-2701-4690-af79-890ea2bac7ab"/>
+				<text><![CDATA[Id:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="155" y="31" width="90" height="20" uuid="d97c3b29-3ba6-4fdb-8862-6c1673d93d25"/>
+				<textFieldExpression><![CDATA[$F{licni_podaci_oslovljavanje}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="155" y="11" width="90" height="20" uuid="da63d5e0-116b-49ed-902e-fa1600074b70"/>
+				<text><![CDATA[Oslovljavanje;]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="255" y="31" width="129" height="20" uuid="c30e1251-d98d-4b16-adfb-01d78c998443"/>
+				<textFieldExpression><![CDATA[$F{licni_podaci_crkvena_titula}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="255" y="11" width="100" height="20" uuid="6b3768d4-4e42-4e3b-82e2-6f95a676f21a"/>
+				<text><![CDATA[Crkvena titula:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="413" y="31" width="126" height="20" uuid="9cd7a352-4eb7-4e9d-b7a9-b97f79bd29f1"/>
+				<textFieldExpression><![CDATA[$F{licni_podaci_akademska_titula}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="411" y="11" width="100" height="20" uuid="c0f22e17-71dc-4d92-98f2-6b46589ff2b3"/>
+				<text><![CDATA[Akademska titula;]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="36" y="71" width="100" height="20" uuid="d75269c1-9ff8-432e-88b0-0314822e82b7"/>
+				<textFieldExpression><![CDATA[$F{licni_podaci_ime_u_lk}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="36" y="51" width="100" height="20" uuid="8939465c-c158-4449-a2ea-952e96cf269f"/>
+				<text><![CDATA[Ime iz lične karte:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="155" y="71" width="100" height="20" uuid="d4cf47d6-0e12-4d29-990f-9fe3f50c8cb2"/>
+				<textFieldExpression><![CDATA[$F{licni_podaci_ime}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="155" y="51" width="100" height="20" uuid="37819e90-131a-4382-a086-f5c07c9ea07c"/>
+				<text><![CDATA[Ime;]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="255" y="71" width="129" height="20" uuid="37b72a8b-02d1-434d-8caf-dcdb152fe6dc"/>
+				<textFieldExpression><![CDATA[$F{licni_podaci_prezime_u_lk}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="255" y="51" width="100" height="20" uuid="03725479-79f0-4db5-9d91-db46971a4bc3"/>
+				<text><![CDATA[Prezime u ličnoj karti:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="413" y="71" width="131" height="20" uuid="22b34152-ea2f-4d13-9de5-865f5a3fb183"/>
+				<textFieldExpression><![CDATA[$F{licni_podaci_prezime}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="411" y="51" width="100" height="20" uuid="e372cb93-5cba-472d-98f0-95938c320c3c"/>
+				<text><![CDATA[Prezime:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="36" y="111" width="100" height="20" uuid="ac818f52-af6c-4226-b21e-bca295aa3884"/>
+				<textFieldExpression><![CDATA[$F{licni_podaci_jmbg}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="36" y="91" width="100" height="20" uuid="8efa9147-9c7c-468e-a527-a8ea0cac3f25"/>
+				<text><![CDATA[Jmbg:]]></text>
+			</staticText>
+			<textField pattern="MM/dd/yyyy">
+				<reportElement x="155" y="111" width="100" height="20" uuid="256e7241-24ce-491f-8907-9d04532491df"/>
+				<textFieldExpression><![CDATA[$F{licni_podaci_datum_rodjenja}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="155" y="91" width="100" height="20" uuid="e9c60262-37ec-4acf-8003-701839aa836e"/>
+				<text><![CDATA[Datum rođenja:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="255" y="111" width="143" height="20" uuid="a6cb1096-7e31-41ff-944a-1529343c66b6"/>
+				<textFieldExpression><![CDATA[$F{licni_podaci_mesto_rodjenja}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="255" y="91" width="100" height="20" uuid="a008eab0-549a-4968-b8d5-87cd1aea279f"/>
+				<text><![CDATA[Mesto rođenja:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="155" y="131" width="100" height="20" uuid="9548b074-02ad-497b-a0a6-ed679bd30596"/>
+				<textFieldExpression><![CDATA[$F{licni_podaci_ime_oca}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="36" y="131" width="100" height="20" uuid="1799332e-ab8b-45f4-b79f-94dd6f972f2e"/>
+				<text><![CDATA[Ime oca:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="355" y="131" width="158" height="20" uuid="7bcb2c1a-52f5-4cef-a417-df9f9dc5a404"/>
+				<textFieldExpression><![CDATA[$F{licni_podaci_ime_majke}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="255" y="131" width="100" height="20" uuid="eb3f86d1-49ad-4000-b8ca-963d38bfba61"/>
+				<text><![CDATA[Ime majke:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="36" y="171" width="162" height="20" uuid="b1c716c6-5a17-4234-9f8f-26150592c008"/>
+				<textFieldExpression><![CDATA[$F{licni_podaci_srednje_obrazovanje_mesto}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="36" y="191" width="100" height="20" uuid="093a33eb-19b0-4323-bdec-b505261632a6"/>
+				<text><![CDATA[Mesto:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="206" y="171" width="149" height="20" uuid="f65bf531-dc9d-4845-b6d4-f2090f1d30b3"/>
+				<textFieldExpression><![CDATA[$F{licni_podaci_srednje_obrazovanje_skola}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="206" y="191" width="100" height="20" uuid="b92beec0-9a9d-4bd5-a44f-97a66b3bab25"/>
+				<text><![CDATA[Naziv škole;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="36" y="151" width="175" height="20" uuid="a43ce6f9-b802-4752-8380-dc3ee8a41763"/>
+				<text><![CDATA[Srednje obrazovanje:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="355" y="171" width="90" height="20" uuid="5b81b99f-a5cd-4af7-9fb9-bc3d31234346"/>
+				<textFieldExpression><![CDATA[$F{licni_podaci_srednje_obrazovanje_od}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="445" y="171" width="100" height="20" uuid="ce126ff2-3d25-4853-b298-21a5ac551e54"/>
+				<textFieldExpression><![CDATA[$F{licni_podaci_srednje_obrazovanje_do}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="355" y="191" width="100" height="20" uuid="c45d6e2d-3c9f-4329-84ec-879839a0c25d"/>
+				<text><![CDATA[Period od - do:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="36" y="231" width="136" height="20" uuid="2a185001-512b-4962-95c6-32c3703a904a"/>
+				<textFieldExpression><![CDATA[$F{licni_podaci_bogoslovija_mesto}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="36" y="211" width="100" height="20" uuid="6a512260-6e4f-4092-befa-fe361533abfa"/>
+				<text><![CDATA[Bogoslovija:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="142" y="211" width="100" height="20" uuid="0282eebb-7832-4b90-b365-be8bb6046eee"/>
+				<text><![CDATA[Mesto:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="36" y="251" width="56" height="20" uuid="04fe2d31-d91e-4903-87c1-49ada9f2378f"/>
+				<textFieldExpression><![CDATA[$F{licni_podaci_bogoslovija_period_od}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="255" y="211" width="100" height="20" uuid="80a177b4-5827-43d9-a919-fe99203a84a4"/>
+				<text><![CDATA[Period od - do:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="113" y="251" width="59" height="20" uuid="091ab97c-5fdd-4bfe-90c0-8e3aedee9c73"/>
+				<textFieldExpression><![CDATA[$F{licni_podaci_bogoslovija_period_do}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="176" y="231" width="100" height="20" uuid="94aec5cc-7636-4864-9b34-6f154332c22d"/>
+				<textFieldExpression><![CDATA[$F{licni_podaci_bogoslovija_mesto1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="201" y="251" width="54" height="20" uuid="75ff8b33-1665-4bff-bb90-3022b9f9d5ba"/>
+				<textFieldExpression><![CDATA[$F{licni_podaci_bogoslovija_period_od1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="262" y="251" width="44" height="20" uuid="903105f8-e9b3-4cdc-bf47-e65b38fce314"/>
+				<textFieldExpression><![CDATA[$F{licni_podaci_bogoslovija_period_do1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="355" y="231" width="107" height="20" uuid="a19a872c-907b-474a-a992-1ce473094f39"/>
+				<textFieldExpression><![CDATA[$F{licni_podaci_bogoslovija_mesto2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="356" y="251" width="42" height="20" uuid="2b5f781a-8929-4045-82f2-58adfd8bb9a6"/>
+				<textFieldExpression><![CDATA[$F{licni_podaci_bogoslovija_period_od2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="411" y="251" width="47" height="20" uuid="40cddf09-8dd9-4b85-94a9-027f286ea315"/>
+				<textFieldExpression><![CDATA[$F{licni_podaci_bogoslovija_period_do2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="42" y="291" width="100" height="20" uuid="b153a141-2d53-4ded-b8a8-28969143fd85"/>
+				<textFieldExpression><![CDATA[$F{licni_podaci_djakonat_mesto}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="36" y="271" width="100" height="20" uuid="5d3b078d-4b1e-4c53-b635-ae23b634b9dc"/>
+				<text><![CDATA[Đakonat;]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="145" y="291" width="100" height="20" uuid="0d7fc13b-fe89-47b8-916a-0e8c9a8870f0"/>
+				<textFieldExpression><![CDATA[$F{licni_podaci_djakonat_datum}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="245" y="291" width="100" height="20" uuid="2410980e-ddbb-4574-989f-54e0ee16019f"/>
+				<textFieldExpression><![CDATA[$F{licni_podaci_djakonat_zareditelj}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="136" y="271" width="100" height="20" uuid="59c66faa-633d-4dbb-b739-7ca559216a96"/>
+				<text><![CDATA[Đakonat datum:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="242" y="271" width="100" height="20" uuid="92e964bc-9152-401e-88fa-8ea5c04c9b5b"/>
+				<text><![CDATA[Đakonat zareditelj;]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="160" y="314" width="100" height="20" uuid="3d907017-8d62-4a40-9d64-d16de28b1dd3"/>
+				<textFieldExpression><![CDATA[$F{licni_podaci_prezbiterat_mesto}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="41" y="311" width="100" height="20" uuid="e4d5ca43-7564-4ed7-9a62-59087c9e666a"/>
+				<text><![CDATA[Prezbiterat mesto:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="403" y="314" width="100" height="20" uuid="425c09e1-093e-4bef-ba25-5c9b0740d70e"/>
+				<textFieldExpression><![CDATA[$F{licni_podaci_prezbiterat_datum}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="284" y="311" width="100" height="20" uuid="9c92ba39-1856-45dc-95f3-832691b58b39"/>
+				<text><![CDATA[Prezbiterat datum:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="247" y="334" width="256" height="20" uuid="1e26946d-1d22-4094-aec7-bd41e0869456"/>
+				<textFieldExpression><![CDATA[$F{licni_podaci_prezbiterat_zareditelj}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="41" y="331" width="175" height="20" uuid="6e4ec386-e1c6-4a5a-9f14-cf8abace409f"/>
+				<text><![CDATA[Prezbiterat zareditelj:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="45" y="374" width="100" height="20" uuid="8a3f5a0b-19fa-4f5e-b7d5-6cddbf9dc505"/>
+				<textFieldExpression><![CDATA[$F{licni_podaci_dodiplomski_studij_mesto}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="41" y="354" width="100" height="20" uuid="3b310cc4-69d9-4f3d-a0a5-9fde9c7858e8"/>
+				<text><![CDATA[Dodiplomski studij - Mesto]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="155" y="371" width="100" height="20" uuid="5b94db09-4c89-4819-b181-497040ee54e2"/>
+				<textFieldExpression><![CDATA[$F{licni_podaci_dodiplomski_studij_naziv_ustanove}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="155" y="351" width="100" height="20" uuid="c71b517d-6802-4049-94b3-e82eed7c7666"/>
+				<text><![CDATA[Naziv ustanove;]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="282" y="371" width="100" height="20" uuid="bcb785b0-74ca-4ddf-bccb-12bff926a424"/>
+				<textFieldExpression><![CDATA[$F{licni_podaci_dodiplomski_studij_period_od}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="384" y="371" width="100" height="20" uuid="b581ba8f-8d9b-4064-89cb-fbd1687dc646"/>
+				<textFieldExpression><![CDATA[$F{licni_podaci_dodiplomski_studij_period_do}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="276" y="351" width="100" height="20" uuid="2644cfab-4683-4753-9789-a975fc0dbce7"/>
+				<text><![CDATA[Period od - do:]]></text>
+			</staticText>
+			<subreport>
+				<reportElement x="14" y="433" width="531" height="49" uuid="5041daba-1f0c-4f94-8b07-6075d35501f1"/>
+				<subreportParameter name="user_id">
+					<subreportParameterExpression><![CDATA[$F{licni_podaci_id}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "karton_subreport_pops.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

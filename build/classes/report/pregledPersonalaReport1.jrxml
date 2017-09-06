@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportTest1" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="31eff5c3-bc6d-41be-85a3-152a678ec32d">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="53"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#F0EFEF"/>
+		</conditionalStyle>
+	</style>
+	<queryString>
+		<![CDATA[SELECT
+     licni_podaci.`id` AS licni_podaci_id,
+     licni_podaci.`jmbg` AS licni_podaci_jmbg,
+     licni_podaci.`ime` AS licni_podaci_ime,
+     licni_podaci.`prezime` AS licni_podaci_prezime,
+     licni_podaci.`ime_oca` AS licni_podaci_ime_oca,
+     licni_podaci.`ime_majke` AS licni_podaci_ime_majke,
+     licni_podaci.`brprotokola` AS licni_podaci_brprotokola,
+
+     licni_podaci.`datum_rodjenja` AS licni_podaci_datum_rodjenja,
+     licni_podaci.`mesto_rodjenja` AS licni_podaci_mesto_rodjenja
+FROM
+     `licni_podaci` licni_podaci]]>
+	</queryString>
+	<field name="licni_podaci_id" class="java.lang.Integer"/>
+	<field name="licni_podaci_jmbg" class="java.lang.String"/>
+	<field name="licni_podaci_ime" class="java.lang.String"/>
+	<field name="licni_podaci_prezime" class="java.lang.String"/>
+	<field name="licni_podaci_ime_oca" class="java.lang.String"/>
+	<field name="licni_podaci_ime_majke" class="java.lang.String"/>
+	<field name="licni_podaci_brprotokola" class="java.lang.String"/>
+	<field name="licni_podaci_datum_rodjenja" class="java.sql.Date"/>
+	<field name="licni_podaci_mesto_rodjenja" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="50" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="549" height="37" forecolor="#000000" backcolor="#FFFFFF" uuid="d479dbcf-0e32-4edb-9d23-646535ec869e"/>
+				<staticText>
+					<reportElement style="SubTitle" x="157" y="0" width="249" height="29" forecolor="#000000" uuid="06116c45-7f65-4a77-8d0e-69c318d63a49"/>
+					<textElement>
+						<font size="18" isBold="false" pdfEncoding="Cp1250"/>
+					</textElement>
+					<text><![CDATA[Podaci o svećenicima]]></text>
+				</staticText>
+				<textField pattern="dd.MM.yyyy">
+					<reportElement x="377" y="0" width="161" height="19" forecolor="#000000" uuid="81f574c1-6ae3-4f3b-a298-88edc12e5fac"/>
+					<textElement textAlignment="Right">
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+				<image>
+					<reportElement x="35" y="0" width="87" height="37" uuid="34cf57b3-0fed-4d19-a463-a88fb4727444"/>
+					<imageExpression><![CDATA["C:\\gui\\images\\grb100x75.jpg"]]></imageExpression>
+				</image>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="41" splitType="Stretch">
+			<staticText>
+				<reportElement style="Column header" x="0" y="7" width="61" height="18" forecolor="#000000" uuid="78e3704f-a82a-47c2-a39f-8ebed0286af4"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Id	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="61" y="7" width="61" height="18" forecolor="#000000" uuid="478308b4-b785-4c15-938b-417074017b1e"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Jmbg]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="157" y="7" width="61" height="18" forecolor="#000000" uuid="8bbc23c2-140d-412e-8033-077ee8637c22"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Ime	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="247" y="7" width="61" height="18" forecolor="#000000" uuid="606a4aaa-c01f-4735-bc79-7154cb9e19cb"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Prezime	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="331" y="7" width="102" height="18" forecolor="#000000" uuid="7a77784e-f5e7-485b-92de-ff1795465334"/>
+				<textElement>
+					<font isBold="false" pdfEncoding="Cp1250"/>
+				</textElement>
+				<text><![CDATA[Datum rođenja	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="433" y="7" width="116" height="18" forecolor="#000000" uuid="6c1470f9-9172-49b0-a3c4-cddab0156bd1"/>
+				<textElement>
+					<font isBold="false" pdfEncoding="Cp1250"/>
+				</textElement>
+				<text><![CDATA[Mesto rođenja]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="31" width="549" height="1" uuid="f2cf64e9-0d06-4d76-9ca5-356c9debc9b7"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="18" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="555" height="18" uuid="2d0281d8-62bc-443e-a675-6a42d55da2de"/>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="2" y="0" width="35" height="18" forecolor="#000000" uuid="b0ad7c49-aa69-4110-ad13-78f3de1a0e1e"/>
+					<textElement>
+						<font fontName="Verdana" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{licni_podaci_id}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="37" y="0" width="102" height="18" uuid="3c7192d9-ea9f-4d4c-a051-eab325e9350b"/>
+					<textElement>
+						<font fontName="Verdana" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{licni_podaci_jmbg}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="139" y="0" width="97" height="18" uuid="63e4210f-a448-4ecb-89d6-079c509e05f0"/>
+					<textElement>
+						<font fontName="Verdana" size="10" pdfEncoding="Cp1250"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{licni_podaci_ime}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="236" y="0" width="121" height="18" uuid="650cccd4-1c07-46cc-8993-a9ed2425c5fe"/>
+					<textElement>
+						<font fontName="Verdana" size="10" pdfEncoding="Cp1250"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{licni_podaci_prezime}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="dd.MM.yyyy">
+					<reportElement style="Detail" positionType="Float" x="357" y="0" width="78" height="18" uuid="708d8a1f-521d-4fea-b7b0-ec53840b5414"/>
+					<textElement>
+						<font fontName="Verdana" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{licni_podaci_datum_rodjenja}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="435" y="0" width="116" height="18" uuid="0001e747-ea91-4eaa-98f7-49af952f1329"/>
+					<textElement>
+						<font fontName="Verdana" size="10" pdfEncoding="Cp1250"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{licni_podaci_mesto_rodjenja}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="7" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="5c8b7f03-3e00-447b-95fe-c9864c12f615"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="1" width="555" height="24" forecolor="#D0B48E" backcolor="#999999" uuid="ee8f165c-c15b-4552-bef3-aadb8c6f66c2"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="513" y="0" width="40" height="20" forecolor="#FFFFFF" uuid="bc47e1cd-69b5-40bb-8332-1e59ae526914"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="433" y="0" width="80" height="20" forecolor="#FFFFFF" uuid="b2629f4e-3ad4-4d6b-8a0e-a643ce78f39c"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Strana "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="dd.MM.yyyy">
+					<reportElement style="Column header" x="2" y="1" width="197" height="20" forecolor="#FFFFFF" uuid="4a1f7b7a-ff84-4636-91f1-487989a0d285"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

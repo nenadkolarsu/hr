@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="sveceniciDuga" pageWidth="652" pageHeight="311" orientation="Landscape" columnWidth="586" leftMargin="33" rightMargin="33" topMargin="28" bottomMargin="28" uuid="30a273d3-394a-4987-901f-c8c70b5ddc25">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="103"/>
+	<queryString>
+		<![CDATA[SELECT
+     zupa.`id` AS zupa_id,
+     zupa.`pak` AS zupa_pak,
+     zupa.`telefon` AS zupa_telefon,
+     zupa.`fax` AS zupa_fax,
+     zupa.`email` AS zupa_email,
+     zupa.`web` AS zupa_web,
+     zupa.`sifra` AS zupa_sifra,
+     zupa.`naziv` AS zupa_naziv,
+     zupa.`jezicnost` AS zupa_jezicnost,
+     zupa.`arhiprezbiterat` AS zupa_arhiprezbiterat,
+     zupa.`dekanat` AS zupa_dekanat,
+     zupa.`oslovljavanje` AS zupa_oslovljavanje,
+     zupa.`titul_zupe` AS zupa_titul_zupe,
+     zupa.`adresa` AS zupa_adresa,
+     zupa.`ptt_broj` AS zupa_ptt_broj,
+     zupa.`mesto` AS zupa_mesto,
+     zupa.`zupnik` AS zupa_zupnik,
+     zupa.`aktivan` AS zupa_aktivan,
+     licni_podaci.`id` AS licni_podaci_id,
+     licni_podaci.`tip_entiteta` AS licni_podaci_tip_entiteta,
+     licni_podaci.`oslovljavanje_sifra` AS licni_podaci_oslovljavanje_sifra,
+     licni_podaci.`oslovljavanje_id` AS licni_podaci_oslovljavanje_id,
+     licni_podaci.`oslovljavanje` AS licni_podaci_oslovljavanje,
+     licni_podaci.`crkvena_titula_sifra` AS licni_podaci_crkvena_titula_sifra,
+     licni_podaci.`crkvena_titula_id` AS licni_podaci_crkvena_titula_id,
+     licni_podaci.`crkvena_titula` AS licni_podaci_crkvena_titula,
+     licni_podaci.`akademska_titula_sifra` AS licni_podaci_akademska_titula_sifra,
+     licni_podaci.`akademska_titula_id` AS licni_podaci_akademska_titula_id,
+     licni_podaci.`akademska_titula` AS licni_podaci_akademska_titula,
+     licni_podaci.`jmbg` AS licni_podaci_jmbg,
+     licni_podaci.`ime` AS licni_podaci_ime,
+     licni_podaci.`prezime` AS licni_podaci_prezime,
+     licni_podaci.`ime_u_lk` AS licni_podaci_ime_u_lk,
+     licni_podaci.`prezime_u_lk` AS licni_podaci_prezime_u_lk,
+     licni_podaci.`ime_oca` AS licni_podaci_ime_oca,
+     licni_podaci.`ime_majke` AS licni_podaci_ime_majke,
+     licni_podaci.`datum_rodjenja` AS licni_podaci_datum_rodjenja,
+     licni_podaci.`mesto_rodjenja_id` AS licni_podaci_mesto_rodjenja_id,
+     licni_podaci.`mesto_rodjenja` AS licni_podaci_mesto_rodjenja,
+     licni_podaci.`mesto_rodjenja_sifra` AS licni_podaci_mesto_rodjenja_sifra,
+     licni_podaci.`srednje_obrazovanje_mesto_id` AS licni_podaci_srednje_obrazovanje_mesto_id,
+     licni_podaci.`srednje_obrazovanje_mesto_sifra` AS licni_podaci_srednje_obrazovanje_mesto_sifra,
+     licni_podaci.`srednje_obrazovanje_mesto` AS licni_podaci_srednje_obrazovanje_mesto,
+     licni_podaci.`srednje_obrazovanje_skola_id` AS licni_podaci_srednje_obrazovanje_skola_id,
+     licni_podaci.`srednje_obrazovanje_skola_sifra` AS licni_podaci_srednje_obrazovanje_skola_sifra,
+     licni_podaci.`srednje_obrazovanje_skola` AS licni_podaci_srednje_obrazovanje_skola,
+     licni_podaci.`srednje_obrazovanje_od` AS licni_podaci_srednje_obrazovanje_od,
+     licni_podaci.`srednje_obrazovanje_do` AS licni_podaci_srednje_obrazovanje_do,
+     licni_podaci.`brprotokola` AS licni_podaci_brprotokola,
+     licni_podaci.`pol` AS licni_podaci_pol,
+     licni_podaci.`drzavarodj` AS licni_podaci_drzavarodj,
+     licni_podaci.`id_drzavarodj` AS licni_podaci_id_drzavarodj,
+     licni_podaci.`adresa` AS licni_podaci_adresa,
+     licni_podaci.`ptt` AS licni_podaci_ptt,
+     licni_podaci.`id_ptt` AS licni_podaci_id_ptt,
+     licni_podaci.`telefon` AS licni_podaci_telefon,
+     licni_podaci.`e_mail` AS licni_podaci_e_mail,
+     licni_podaci.`status` AS licni_podaci_status,
+     licni_podaci.`id_status` AS licni_podaci_id_status,
+     licni_podaci.`drzavljanstvo` AS licni_podaci_drzavljanstvo,
+     licni_podaci.`id_drzavljanstvo` AS licni_podaci_id_drzavljanstvo,
+     licni_podaci.`nacionalnost` AS licni_podaci_nacionalnost,
+     licni_podaci.`id_nacionalnost` AS licni_podaci_id_nacionalnost,
+     licni_podaci.`zupa_id` AS licni_podaci_zupa_id,
+     licni_podaci.`zupa_sifra` AS licni_podaci_zupa_sifra,
+     licni_podaci.`zupa_naziv` AS licni_podaci_zupa_naziv,
+     licni_podaci.`ustanova_id` AS licni_podaci_ustanova_id,
+     licni_podaci.`ustanova_sifra` AS licni_podaci_ustanova_sifra,
+     licni_podaci.`ustanova_naziv` AS licni_podaci_ustanova_naziv,
+     licni_podaci.`slika` AS licni_podaci_slika,
+     licni_podaci.`banka_isplata` AS licni_podaci_banka_isplata,
+     licni_podaci.`id_banka_isplata` AS licni_podaci_id_banka_isplata,
+     licni_podaci.`racun_isplate` AS licni_podaci_racun_isplate,
+     licni_podaci.`opstina` AS licni_podaci_opstina,
+     licni_podaci.`id_opstina` AS licni_podaci_id_opstina,
+     licni_podaci.`sifra` AS licni_podaci_sifra,
+     licni_podaci.`bogoslovija_mesto_id` AS licni_podaci_bogoslovija_mesto_id,
+     licni_podaci.`bogoslovija_mesto_sifra` AS licni_podaci_bogoslovija_mesto_sifra,
+     licni_podaci.`bogoslovija_mesto` AS licni_podaci_bogoslovija_mesto,
+     licni_podaci.`bogoslovija_mesto1_id` AS licni_podaci_bogoslovija_mesto1_id,
+     licni_podaci.`bogoslovija_mesto1_sifra` AS licni_podaci_bogoslovija_mesto1_sifra,
+     licni_podaci.`bogoslovija_mesto1` AS licni_podaci_bogoslovija_mesto1,
+     licni_podaci.`bogoslovija_mesto2_id` AS licni_podaci_bogoslovija_mesto2_id,
+     licni_podaci.`bogoslovija_mesto2_sifra` AS licni_podaci_bogoslovija_mesto2_sifra,
+     licni_podaci.`bogoslovija_mesto2` AS licni_podaci_bogoslovija_mesto2,
+     licni_podaci.`bogoslovija_period_od` AS licni_podaci_bogoslovija_period_od,
+     licni_podaci.`bogoslovija_period_do` AS licni_podaci_bogoslovija_period_do,
+     licni_podaci.`bogoslovija_period_od1` AS licni_podaci_bogoslovija_period_od1,
+     licni_podaci.`bogoslovija_period_do1` AS licni_podaci_bogoslovija_period_do1,
+     licni_podaci.`bogoslovija_period_od2` AS licni_podaci_bogoslovija_period_od2,
+     licni_podaci.`bogoslovija_period_do2` AS licni_podaci_bogoslovija_period_do2,
+     licni_podaci.`djakonat_mesto_id` AS licni_podaci_djakonat_mesto_id,
+     licni_podaci.`djakonat_mesto_sifra` AS licni_podaci_djakonat_mesto_sifra,
+     licni_podaci.`djakonat_mesto` AS licni_podaci_djakonat_mesto,
+     licni_podaci.`djakonat_datum` AS licni_podaci_djakonat_datum,
+     licni_podaci.`djakonat_zareditelj_id` AS licni_podaci_djakonat_zareditelj_id,
+     licni_podaci.`djakonat_zareditelj_sifra` AS licni_podaci_djakonat_zareditelj_sifra,
+     licni_podaci.`djakonat_zareditelj` AS licni_podaci_djakonat_zareditelj,
+     licni_podaci.`prezbiterat_mesto_id` AS licni_podaci_prezbiterat_mesto_id,
+     licni_podaci.`prezbiterat_mesto_sifra` AS licni_podaci_prezbiterat_mesto_sifra,
+     licni_podaci.`prezbiterat_mesto` AS licni_podaci_prezbiterat_mesto,
+     licni_podaci.`prezbiterat_datum` AS licni_podaci_prezbiterat_datum,
+     licni_podaci.`prezbiterat_zareditelj_id` AS licni_podaci_prezbiterat_zareditelj_id,
+     licni_podaci.`prezbiterat_zareditelj_sifra` AS licni_podaci_prezbiterat_zareditelj_sifra,
+     licni_podaci.`prezbiterat_zareditelj` AS licni_podaci_prezbiterat_zareditelj,
+     licni_podaci.`dodiplomski_studij_mesto_id` AS licni_podaci_dodiplomski_studij_mesto_id,
+     licni_podaci.`dodiplomski_studij_mesto_sifra` AS licni_podaci_dodiplomski_studij_mesto_sifra,
+     licni_podaci.`dodiplomski_studij_mesto` AS licni_podaci_dodiplomski_studij_mesto,
+     licni_podaci.`dodiplomski_studij_naziv_ustanove_id` AS licni_podaci_dodiplomski_studij_naziv_ustanove_id,
+     licni_podaci.`dodiplomski_studij_naziv_ustanove_sifra` AS licni_podaci_dodiplomski_studij_naziv_ustanove_sifra,
+     licni_podaci.`dodiplomski_studij_naziv_ustanove` AS licni_podaci_dodiplomski_studij_naziv_ustanove,
+     licni_podaci.`dodiplomski_studij_period_od` AS licni_podaci_dodiplomski_studij_period_od,
+     licni_podaci.`dodiplomski_studij_period_do` AS licni_podaci_dodiplomski_studij_period_do,
+     licni_podaci.`magisterij_mesto_id` AS licni_podaci_magisterij_mesto_id,
+     licni_podaci.`magisterij_mesto_sifra` AS licni_podaci_magisterij_mesto_sifra,
+     licni_podaci.`magisterij_mesto` AS licni_podaci_magisterij_mesto,
+     licni_podaci.`magisterij_naziv_ustanove_id` AS licni_podaci_magisterij_naziv_ustanove_id,
+     licni_podaci.`magisterij_naziv_ustanove_sifra` AS licni_podaci_magisterij_naziv_ustanove_sifra,
+     licni_podaci.`magisterij_naziv_ustanove` AS licni_podaci_magisterij_naziv_ustanove,
+     licni_podaci.`magisterij_period_od` AS licni_podaci_magisterij_period_od,
+     licni_podaci.`magisterij_period_do` AS licni_podaci_magisterij_period_do,
+     licni_podaci.`doktorat_mesto_id` AS licni_podaci_doktorat_mesto_id,
+     licni_podaci.`doktorat_mesto_sifra` AS licni_podaci_doktorat_mesto_sifra,
+     licni_podaci.`doktorat_mesto` AS licni_podaci_doktorat_mesto,
+     licni_podaci.`doktorat_naziv_ustanove_id` AS licni_podaci_doktorat_naziv_ustanove_id,
+     licni_podaci.`doktorat_naziv_ustanove_sifra` AS licni_podaci_doktorat_naziv_ustanove_sifra,
+     licni_podaci.`doktorat_naziv_ustanove` AS licni_podaci_doktorat_naziv_ustanove,
+     licni_podaci.`doktorat_period_od` AS licni_podaci_doktorat_period_od,
+     licni_podaci.`doktorat_period_do` AS licni_podaci_doktorat_period_do,
+     licni_podaci.`photo` AS licni_podaci_photo,
+     licni_podaci.`datum_vreme` AS licni_podaci_datum_vreme,
+     licni_podaci.`aktivan` AS licni_podaci_aktivan,
+     licni_podaci.`banka` AS licni_podaci_banka,
+     licni_podaci.`tekuci_racun` AS licni_podaci_tekuci_racun,
+     licni_podaci.`datum_prestanka_sluzbe` AS licni_podaci_datum_prestanka_sluzbe
+FROM
+     `zupa` zupa RIGHT OUTER JOIN `licni_podaci` licni_podaci ON zupa.`id` = licni_podaci.`zupa_id`
+WHERE licni_podaci.`aktivan`]]>
+	</queryString>
+	<field name="zupa_id" class="java.lang.Integer"/>
+	<field name="zupa_pak" class="java.lang.String"/>
+	<field name="zupa_telefon" class="java.lang.String"/>
+	<field name="zupa_fax" class="java.lang.String"/>
+	<field name="zupa_email" class="java.lang.String"/>
+	<field name="zupa_web" class="java.lang.String"/>
+	<field name="zupa_sifra" class="java.lang.String"/>
+	<field name="zupa_naziv" class="java.lang.String"/>
+	<field name="zupa_jezicnost" class="java.lang.String"/>
+	<field name="zupa_arhiprezbiterat" class="java.lang.String"/>
+	<field name="zupa_dekanat" class="java.lang.String"/>
+	<field name="zupa_oslovljavanje" class="java.lang.String"/>
+	<field name="zupa_titul_zupe" class="java.lang.String"/>
+	<field name="zupa_adresa" class="java.lang.String"/>
+	<field name="zupa_ptt_broj" class="java.lang.String"/>
+	<field name="zupa_mesto" class="java.lang.String"/>
+	<field name="zupa_zupnik" class="java.lang.String"/>
+	<field name="zupa_aktivan" class="java.lang.Boolean"/>
+	<field name="licni_podaci_id" class="java.lang.Integer"/>
+	<field name="licni_podaci_tip_entiteta" class="java.lang.String"/>
+	<field name="licni_podaci_oslovljavanje_sifra" class="java.lang.Integer"/>
+	<field name="licni_podaci_oslovljavanje_id" class="java.lang.Integer"/>
+	<field name="licni_podaci_oslovljavanje" class="java.lang.String"/>
+	<field name="licni_podaci_crkvena_titula_sifra" class="java.lang.Integer"/>
+	<field name="licni_podaci_crkvena_titula_id" class="java.lang.Integer"/>
+	<field name="licni_podaci_crkvena_titula" class="java.lang.String"/>
+	<field name="licni_podaci_akademska_titula_sifra" class="java.lang.Integer"/>
+	<field name="licni_podaci_akademska_titula_id" class="java.lang.Integer"/>
+	<field name="licni_podaci_akademska_titula" class="java.lang.String"/>
+	<field name="licni_podaci_jmbg" class="java.lang.String"/>
+	<field name="licni_podaci_ime" class="java.lang.String"/>
+	<field name="licni_podaci_prezime" class="java.lang.String"/>
+	<field name="licni_podaci_ime_u_lk" class="java.lang.String"/>
+	<field name="licni_podaci_prezime_u_lk" class="java.lang.String"/>
+	<field name="licni_podaci_ime_oca" class="java.lang.String"/>
+	<field name="licni_podaci_ime_majke" class="java.lang.String"/>
+	<field name="licni_podaci_datum_rodjenja" class="java.sql.Date"/>
+	<field name="licni_podaci_mesto_rodjenja_id" class="java.lang.Integer"/>
+	<field name="licni_podaci_mesto_rodjenja" class="java.lang.String"/>
+	<field name="licni_podaci_mesto_rodjenja_sifra" class="java.lang.Integer"/>
+	<field name="licni_podaci_srednje_obrazovanje_mesto_id" class="java.lang.Integer"/>
+	<field name="licni_podaci_srednje_obrazovanje_mesto_sifra" class="java.lang.Integer"/>
+	<field name="licni_podaci_srednje_obrazovanje_mesto" class="java.lang.String"/>
+	<field name="licni_podaci_srednje_obrazovanje_skola_id" class="java.lang.Integer"/>
+	<field name="licni_podaci_srednje_obrazovanje_skola_sifra" class="java.lang.Integer"/>
+	<field name="licni_podaci_srednje_obrazovanje_skola" class="java.lang.String"/>
+	<field name="licni_podaci_srednje_obrazovanje_od" class="java.lang.String"/>
+	<field name="licni_podaci_srednje_obrazovanje_do" class="java.lang.String"/>
+	<field name="licni_podaci_brprotokola" class="java.lang.String"/>
+	<field name="licni_podaci_pol" class="java.lang.String"/>
+	<field name="licni_podaci_drzavarodj" class="java.lang.String"/>
+	<field name="licni_podaci_id_drzavarodj" class="java.lang.String"/>
+	<field name="licni_podaci_adresa" class="java.lang.String"/>
+	<field name="licni_podaci_ptt" class="java.lang.String"/>
+	<field name="licni_podaci_id_ptt" class="java.lang.Integer"/>
+	<field name="licni_podaci_telefon" class="java.lang.String"/>
+	<field name="licni_podaci_e_mail" class="java.lang.String"/>
+	<field name="licni_podaci_status" class="java.lang.String"/>
+	<field name="licni_podaci_id_status" class="java.lang.Integer"/>
+	<field name="licni_podaci_drzavljanstvo" class="java.lang.String"/>
+	<field name="licni_podaci_id_drzavljanstvo" class="java.lang.Integer"/>
+	<field name="licni_podaci_nacionalnost" class="java.lang.String"/>
+	<field name="licni_podaci_id_nacionalnost" class="java.lang.Integer"/>
+	<field name="licni_podaci_zupa_id" class="java.lang.Integer"/>
+	<field name="licni_podaci_zupa_sifra" class="java.lang.String"/>
+	<field name="licni_podaci_zupa_naziv" class="java.lang.String"/>
+	<field name="licni_podaci_ustanova_id" class="java.lang.Integer"/>
+	<field name="licni_podaci_ustanova_sifra" class="java.lang.String"/>
+	<field name="licni_podaci_ustanova_naziv" class="java.lang.String"/>
+	<field name="licni_podaci_slika" class="java.lang.String"/>
+	<field name="licni_podaci_banka_isplata" class="java.lang.String"/>
+	<field name="licni_podaci_id_banka_isplata" class="java.lang.Integer"/>
+	<field name="licni_podaci_racun_isplate" class="java.lang.String"/>
+	<field name="licni_podaci_opstina" class="java.lang.String"/>
+	<field name="licni_podaci_id_opstina" class="java.lang.Integer"/>
+	<field name="licni_podaci_sifra" class="java.lang.String"/>
+	<field name="licni_podaci_bogoslovija_mesto_id" class="java.lang.Integer"/>
+	<field name="licni_podaci_bogoslovija_mesto_sifra" class="java.lang.String"/>
+	<field name="licni_podaci_bogoslovija_mesto" class="java.lang.String"/>
+	<field name="licni_podaci_bogoslovija_mesto1_id" class="java.lang.Integer"/>
+	<field name="licni_podaci_bogoslovija_mesto1_sifra" class="java.lang.String"/>
+	<field name="licni_podaci_bogoslovija_mesto1" class="java.lang.String"/>
+	<field name="licni_podaci_bogoslovija_mesto2_id" class="java.lang.Integer"/>
+	<field name="licni_podaci_bogoslovija_mesto2_sifra" class="java.lang.String"/>
+	<field name="licni_podaci_bogoslovija_mesto2" class="java.lang.String"/>
+	<field name="licni_podaci_bogoslovija_period_od" class="java.lang.String"/>
+	<field name="licni_podaci_bogoslovija_period_do" class="java.lang.String"/>
+	<field name="licni_podaci_bogoslovija_period_od1" class="java.lang.String"/>
+	<field name="licni_podaci_bogoslovija_period_do1" class="java.lang.String"/>
+	<field name="licni_podaci_bogoslovija_period_od2" class="java.lang.String"/>
+	<field name="licni_podaci_bogoslovija_period_do2" class="java.lang.String"/>
+	<field name="licni_podaci_djakonat_mesto_id" class="java.lang.Integer"/>
+	<field name="licni_podaci_djakonat_mesto_sifra" class="java.lang.String"/>
+	<field name="licni_podaci_djakonat_mesto" class="java.lang.String"/>
+	<field name="licni_podaci_djakonat_datum" class="java.sql.Date"/>
+	<field name="licni_podaci_djakonat_zareditelj_id" class="java.lang.Integer"/>
+	<field name="licni_podaci_djakonat_zareditelj_sifra" class="java.lang.String"/>
+	<field name="licni_podaci_djakonat_zareditelj" class="java.lang.String"/>
+	<field name="licni_podaci_prezbiterat_mesto_id" class="java.lang.Integer"/>
+	<field name="licni_podaci_prezbiterat_mesto_sifra" class="java.lang.String"/>
+	<field name="licni_podaci_prezbiterat_mesto" class="java.lang.String"/>
+	<field name="licni_podaci_prezbiterat_datum" class="java.sql.Date"/>
+	<field name="licni_podaci_prezbiterat_zareditelj_id" class="java.lang.Integer"/>
+	<field name="licni_podaci_prezbiterat_zareditelj_sifra" class="java.lang.String"/>
+	<field name="licni_podaci_prezbiterat_zareditelj" class="java.lang.String"/>
+	<field name="licni_podaci_dodiplomski_studij_mesto_id" class="java.lang.Integer"/>
+	<field name="licni_podaci_dodiplomski_studij_mesto_sifra" class="java.lang.String"/>
+	<field name="licni_podaci_dodiplomski_studij_mesto" class="java.lang.String"/>
+	<field name="licni_podaci_dodiplomski_studij_naziv_ustanove_id" class="java.lang.Integer"/>
+	<field name="licni_podaci_dodiplomski_studij_naziv_ustanove_sifra" class="java.lang.String"/>
+	<field name="licni_podaci_dodiplomski_studij_naziv_ustanove" class="java.lang.String"/>
+	<field name="licni_podaci_dodiplomski_studij_period_od" class="java.lang.String"/>
+	<field name="licni_podaci_dodiplomski_studij_period_do" class="java.lang.String"/>
+	<field name="licni_podaci_magisterij_mesto_id" class="java.lang.Integer"/>
+	<field name="licni_podaci_magisterij_mesto_sifra" class="java.lang.String"/>
+	<field name="licni_podaci_magisterij_mesto" class="java.lang.String"/>
+	<field name="licni_podaci_magisterij_naziv_ustanove_id" class="java.lang.Integer"/>
+	<field name="licni_podaci_magisterij_naziv_ustanove_sifra" class="java.lang.String"/>
+	<field name="licni_podaci_magisterij_naziv_ustanove" class="java.lang.String"/>
+	<field name="licni_podaci_magisterij_period_od" class="java.lang.String"/>
+	<field name="licni_podaci_magisterij_period_do" class="java.lang.String"/>
+	<field name="licni_podaci_doktorat_mesto_id" class="java.lang.Integer"/>
+	<field name="licni_podaci_doktorat_mesto_sifra" class="java.lang.String"/>
+	<field name="licni_podaci_doktorat_mesto" class="java.lang.String"/>
+	<field name="licni_podaci_doktorat_naziv_ustanove_id" class="java.lang.Integer"/>
+	<field name="licni_podaci_doktorat_naziv_ustanove_sifra" class="java.lang.String"/>
+	<field name="licni_podaci_doktorat_naziv_ustanove" class="java.lang.String"/>
+	<field name="licni_podaci_doktorat_period_od" class="java.lang.String"/>
+	<field name="licni_podaci_doktorat_period_do" class="java.lang.String"/>
+	<field name="licni_podaci_photo" class="java.lang.Object"/>
+	<field name="licni_podaci_datum_vreme" class="java.sql.Timestamp"/>
+	<field name="licni_podaci_aktivan" class="java.lang.Integer"/>
+	<field name="licni_podaci_banka" class="java.lang.String"/>
+	<field name="licni_podaci_tekuci_racun" class="java.lang.String"/>
+	<field name="licni_podaci_datum_prestanka_sluzbe" class="java.sql.Date"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="255" splitType="Stretch">
+			<staticText>
+				<reportElement x="24" y="0" width="229" height="86" uuid="26921755-e339-4ba7-9576-5e168c4a561f"/>
+				<textElement>
+					<font fontName="Arial" pdfEncoding="Cp1250"/>
+				</textElement>
+				<text><![CDATA[Biskupski ordinarijat - Püspöki Hatóság
+Trg svete Terezije 3
+SRB - 24000 SUBOTICA - 450521
+Tel: + 381 (0)24/ 553-610
+Fax: + 381 (0)24/ 552-497
+E-mail: subisk@tippnet.rs]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="383" y="108" width="102" height="20" uuid="7da009da-6d44-4ec0-b8d5-d3805259691a"/>
+				<textElement>
+					<font fontName="Arial" size="14" pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{licni_podaci_crkvena_titula}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="383" y="148" width="192" height="20" uuid="061cb913-7751-40b8-a1d0-08eb5b7c640a"/>
+				<textElement>
+					<font fontName="Arial" size="14" pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{zupa_naziv}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="383" y="168" width="192" height="20" uuid="6d878382-e5c9-44de-bc44-b90b45d8758b"/>
+				<textElement>
+					<font fontName="Arial" size="14" pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{zupa_adresa}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="383" y="188" width="57" height="20" uuid="2f43b38b-5d5c-47a3-bba8-192e16e76a98"/>
+				<textElement>
+					<font fontName="Arial" size="14" pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{zupa_ptt_broj}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="440" y="188" width="135" height="20" uuid="d11c085b-e21f-4bc8-afa2-3dab3992bcfe"/>
+				<textElement>
+					<font fontName="Arial" size="14" pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{zupa_mesto}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="417" y="210" width="133" height="20" uuid="c130db03-97b9-450e-bf63-f34baa603b45"/>
+				<textElement>
+					<font fontName="Arial" size="14" pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{zupa_pak}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="384" y="210" width="38" height="20" uuid="8fdf8116-2c2e-4367-aa09-ee6be6aa84c9"/>
+				<textElement>
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<text><![CDATA[PAK]]></text>
+			</staticText>
+			<break>
+				<reportElement x="0" y="246" width="100" height="1" uuid="ddba6370-f264-4530-883a-c8650412ee77"/>
+			</break>
+			<textField isBlankWhenNull="true">
+				<reportElement x="383" y="128" width="102" height="20" uuid="f19448f2-129b-4f4d-b062-f6df2f54bb00"/>
+				<textElement>
+					<font fontName="Arial" size="14" pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{licni_podaci_prezime}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="485" y="128" width="101" height="20" uuid="e27832d9-e15c-4aa3-8d56-7b9f3e093069"/>
+				<textElement>
+					<font fontName="Arial" size="14" pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{licni_podaci_ime}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="269" y="128" width="101" height="20" uuid="06c016bb-af6d-4134-9de4-468c6ec57201"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial" size="14" pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{licni_podaci_akademska_titula}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

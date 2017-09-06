@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="PregledPoZupama_sa_pops" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="6918fd3c-4a23-452a-a11e-2ca093560cc0">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="user_id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[$F{podaci_o_pastoralnoj_sluzbi_user_id}]]></defaultValueExpression>
+	</parameter>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     podaci_o_pastoralnoj_sluzbi.`id` AS podaci_o_pastoralnoj_sluzbi_id,
+     podaci_o_pastoralnoj_sluzbi.`user_id` AS podaci_o_pastoralnoj_sluzbi_user_id,
+     podaci_o_pastoralnoj_sluzbi.`jmbg` AS podaci_o_pastoralnoj_sluzbi_jmbg,
+     podaci_o_pastoralnoj_sluzbi.`rbr` AS podaci_o_pastoralnoj_sluzbi_rbr,
+     podaci_o_pastoralnoj_sluzbi.`mesto_sluzbe` AS podaci_o_pastoralnoj_sluzbi_mesto_sluzbe,
+     podaci_o_pastoralnoj_sluzbi.`mesto_sluzbe_id` AS podaci_o_pastoralnoj_sluzbi_mesto_sluzbe_id,
+     podaci_o_pastoralnoj_sluzbi.`mesto_sluzbe_sifra` AS podaci_o_pastoralnoj_sluzbi_mesto_sluzbe_sifra,
+     podaci_o_pastoralnoj_sluzbi.`naziv_ustanove` AS podaci_o_pastoralnoj_sluzbi_naziv_ustanove,
+     podaci_o_pastoralnoj_sluzbi.`naziv_ustanove_id` AS podaci_o_pastoralnoj_sluzbi_naziv_ustanove_id,
+     podaci_o_pastoralnoj_sluzbi.`naziv_ustanove_sifra` AS podaci_o_pastoralnoj_sluzbi_naziv_ustanove_sifra,
+     podaci_o_pastoralnoj_sluzbi.`naziv_zupe` AS podaci_o_pastoralnoj_sluzbi_naziv_zupe,
+     podaci_o_pastoralnoj_sluzbi.`naziv_zupe_id` AS podaci_o_pastoralnoj_sluzbi_naziv_zupe_id,
+     podaci_o_pastoralnoj_sluzbi.`naziv_zupe_sifra` AS podaci_o_pastoralnoj_sluzbi_naziv_zupe_sifra,
+     podaci_o_pastoralnoj_sluzbi.`svojstvo` AS podaci_o_pastoralnoj_sluzbi_svojstvo,
+     podaci_o_pastoralnoj_sluzbi.`svojstvo_id` AS podaci_o_pastoralnoj_sluzbi_svojstvo_id,
+     podaci_o_pastoralnoj_sluzbi.`svojstvo_sifra` AS podaci_o_pastoralnoj_sluzbi_svojstvo_sifra,
+     podaci_o_pastoralnoj_sluzbi.`dekret` AS podaci_o_pastoralnoj_sluzbi_dekret,
+     podaci_o_pastoralnoj_sluzbi.`pocetak_sluzbe_od` AS podaci_o_pastoralnoj_sluzbi_pocetak_sluzbe_od,
+     podaci_o_pastoralnoj_sluzbi.`trajanje_sluzbe_do` AS podaci_o_pastoralnoj_sluzbi_trajanje_sluzbe_do,
+     podaci_o_pastoralnoj_sluzbi.`aktivan` AS podaci_o_pastoralnoj_sluzbi_aktivan,
+     podaci_o_pastoralnoj_sluzbi.`datum_vreme` AS podaci_o_pastoralnoj_sluzbi_datum_vreme,
+     podaci_o_pastoralnoj_sluzbi.`korisnik` AS podaci_o_pastoralnoj_sluzbi_korisnik
+FROM
+     `podaci_o_pastoralnoj_sluzbi` podaci_o_pastoralnoj_sluzbi]]>
+	</queryString>
+	<field name="podaci_o_pastoralnoj_sluzbi_user_id" class="java.lang.Integer"/>
+	<field name="podaci_o_pastoralnoj_sluzbi_rbr" class="java.lang.Integer"/>
+	<field name="podaci_o_pastoralnoj_sluzbi_mesto_sluzbe" class="java.lang.String"/>
+	<field name="podaci_o_pastoralnoj_sluzbi_naziv_ustanove" class="java.lang.String"/>
+	<field name="podaci_o_pastoralnoj_sluzbi_naziv_zupe" class="java.lang.String"/>
+	<field name="podaci_o_pastoralnoj_sluzbi_svojstvo" class="java.lang.String"/>
+	<field name="podaci_o_pastoralnoj_sluzbi_dekret" class="java.lang.String"/>
+	<field name="podaci_o_pastoralnoj_sluzbi_pocetak_sluzbe_od" class="java.sql.Date"/>
+	<field name="podaci_o_pastoralnoj_sluzbi_trajanje_sluzbe_do" class="java.sql.Date"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="69" y="2" width="100" height="20" uuid="1138db28-4e83-44df-b779-d39e3a28048c"/>
+				<text><![CDATA[podaci_o_pastoralnoj_sluzbi_rbr]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="141" y="2" width="100" height="20" uuid="546c95d1-b95b-4d1d-93be-19fd83ae7525"/>
+				<text><![CDATA[podaci_o_pastoralnoj_sluzbi_mesto_sluzbe]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="53" splitType="Stretch">
+			<textField>
+				<reportElement x="15" y="18" width="54" height="20" uuid="3e0e39d7-2771-4594-b0f4-92f607e3ef1e"/>
+				<textFieldExpression><![CDATA[$F{podaci_o_pastoralnoj_sluzbi_rbr}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="91" y="18" width="100" height="20" uuid="01d5c2c6-4d40-436a-be61-0fdf20deb5c7"/>
+				<textFieldExpression><![CDATA[$F{podaci_o_pastoralnoj_sluzbi_mesto_sluzbe}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

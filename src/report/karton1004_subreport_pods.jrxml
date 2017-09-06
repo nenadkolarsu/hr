@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="karton1004_subreport_pods" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="1c3b8659-d06c-4bf4-9798-827e25f60c9c">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="user_id" class="java.lang.String">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+		<defaultValueExpression><![CDATA[27]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     podaci_o_dodatnoj_sluzbi.`id` AS podaci_o_dodatnoj_sluzbi_id,
+     podaci_o_dodatnoj_sluzbi.`user_id` AS podaci_o_dodatnoj_sluzbi_user_id,
+     podaci_o_dodatnoj_sluzbi.`jmbg` AS podaci_o_dodatnoj_sluzbi_jmbg,
+     podaci_o_dodatnoj_sluzbi.`rbr` AS podaci_o_dodatnoj_sluzbi_rbr,
+     podaci_o_dodatnoj_sluzbi.`mesto_sluzbe` AS podaci_o_dodatnoj_sluzbi_mesto_sluzbe,
+     podaci_o_dodatnoj_sluzbi.`mesto_sluzbe_id` AS podaci_o_dodatnoj_sluzbi_mesto_sluzbe_id,
+     podaci_o_dodatnoj_sluzbi.`mesto_sluzbe_sifra` AS podaci_o_dodatnoj_sluzbi_mesto_sluzbe_sifra,
+     podaci_o_dodatnoj_sluzbi.`naziv_ustanove` AS podaci_o_dodatnoj_sluzbi_naziv_ustanove,
+     podaci_o_dodatnoj_sluzbi.`naziv_ustanove_id` AS podaci_o_dodatnoj_sluzbi_naziv_ustanove_id,
+     podaci_o_dodatnoj_sluzbi.`naziv_ustanove_sifra` AS podaci_o_dodatnoj_sluzbi_naziv_ustanove_sifra,
+     podaci_o_dodatnoj_sluzbi.`naziv_zupe` AS podaci_o_dodatnoj_sluzbi_naziv_zupe,
+     podaci_o_dodatnoj_sluzbi.`naziv_zupe_id` AS podaci_o_dodatnoj_sluzbi_naziv_zupe_id,
+     podaci_o_dodatnoj_sluzbi.`naziv_zupe_sifra` AS podaci_o_dodatnoj_sluzbi_naziv_zupe_sifra,
+     podaci_o_dodatnoj_sluzbi.`svojstvo` AS podaci_o_dodatnoj_sluzbi_svojstvo,
+     podaci_o_dodatnoj_sluzbi.`svojstvo_id` AS podaci_o_dodatnoj_sluzbi_svojstvo_id,
+     podaci_o_dodatnoj_sluzbi.`svojstvo_sifra` AS podaci_o_dodatnoj_sluzbi_svojstvo_sifra,
+     podaci_o_dodatnoj_sluzbi.`dekret` AS podaci_o_dodatnoj_sluzbi_dekret,
+     podaci_o_dodatnoj_sluzbi.`pocetak_sluzbe_od` AS podaci_o_dodatnoj_sluzbi_pocetak_sluzbe_od,
+     podaci_o_dodatnoj_sluzbi.`trajanje_sluzbe_do` AS podaci_o_dodatnoj_sluzbi_trajanje_sluzbe_do,
+     podaci_o_dodatnoj_sluzbi.`aktivan` AS podaci_o_dodatnoj_sluzbi_aktivan,
+     podaci_o_dodatnoj_sluzbi.`datum_vreme` AS podaci_o_dodatnoj_sluzbi_datum_vreme,
+     podaci_o_dodatnoj_sluzbi.`korisnik` AS podaci_o_dodatnoj_sluzbi_korisnik
+FROM
+     `podaci_o_dodatnoj_sluzbi` podaci_o_dodatnoj_sluzbi where user_id = $P{user_id}
+ORDER BY podaci_o_dodatnoj_sluzbi_pocetak_sluzbe_od]]>
+	</queryString>
+	<field name="podaci_o_dodatnoj_sluzbi_id" class="java.lang.Integer"/>
+	<field name="podaci_o_dodatnoj_sluzbi_user_id" class="java.lang.Integer"/>
+	<field name="podaci_o_dodatnoj_sluzbi_jmbg" class="java.lang.String"/>
+	<field name="podaci_o_dodatnoj_sluzbi_rbr" class="java.lang.Integer"/>
+	<field name="podaci_o_dodatnoj_sluzbi_mesto_sluzbe" class="java.lang.String"/>
+	<field name="podaci_o_dodatnoj_sluzbi_mesto_sluzbe_id" class="java.lang.Integer"/>
+	<field name="podaci_o_dodatnoj_sluzbi_mesto_sluzbe_sifra" class="java.lang.Integer"/>
+	<field name="podaci_o_dodatnoj_sluzbi_naziv_ustanove" class="java.lang.String"/>
+	<field name="podaci_o_dodatnoj_sluzbi_naziv_ustanove_id" class="java.lang.Integer"/>
+	<field name="podaci_o_dodatnoj_sluzbi_naziv_ustanove_sifra" class="java.lang.Integer"/>
+	<field name="podaci_o_dodatnoj_sluzbi_naziv_zupe" class="java.lang.String"/>
+	<field name="podaci_o_dodatnoj_sluzbi_naziv_zupe_id" class="java.lang.Integer"/>
+	<field name="podaci_o_dodatnoj_sluzbi_naziv_zupe_sifra" class="java.lang.Integer"/>
+	<field name="podaci_o_dodatnoj_sluzbi_svojstvo" class="java.lang.String"/>
+	<field name="podaci_o_dodatnoj_sluzbi_svojstvo_id" class="java.lang.Integer"/>
+	<field name="podaci_o_dodatnoj_sluzbi_svojstvo_sifra" class="java.lang.Integer"/>
+	<field name="podaci_o_dodatnoj_sluzbi_dekret" class="java.lang.String"/>
+	<field name="podaci_o_dodatnoj_sluzbi_pocetak_sluzbe_od" class="java.sql.Date"/>
+	<field name="podaci_o_dodatnoj_sluzbi_trajanje_sluzbe_do" class="java.sql.Date"/>
+	<field name="podaci_o_dodatnoj_sluzbi_aktivan" class="java.lang.Boolean"/>
+	<field name="podaci_o_dodatnoj_sluzbi_datum_vreme" class="java.sql.Timestamp"/>
+	<field name="podaci_o_dodatnoj_sluzbi_korisnik" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="37" splitType="Stretch">
+			<staticText>
+				<reportElement x="171" y="9" width="190" height="20" uuid="f01d8939-ab62-4d35-b7ef-96ad3b3d9f07"/>
+				<textElement>
+					<font fontName="Verdana" size="10" isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Podaci o dodatnim službama]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="28" splitType="Stretch">
+			<staticText>
+				<reportElement x="12" y="3" width="48" height="20" uuid="4e474317-918d-4eca-815a-7f3684ab02d7"/>
+				<textElement>
+					<font fontName="SansSerif" size="9" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Rbr]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="71" y="4" width="100" height="20" uuid="423aaeed-99c2-4642-8a19-34312fa18d7d"/>
+				<textElement>
+					<font fontName="SansSerif" size="9" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Mjesto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="409" y="3" width="63" height="20" uuid="8593029e-051e-4df2-be1d-3ebd4085fd36"/>
+				<textElement>
+					<font fontName="SansSerif" size="9" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Od  ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="176" y="3" width="55" height="20" uuid="f91f8971-a60a-4dcd-8c73-40ad2e307873"/>
+				<textElement>
+					<font fontName="SansSerif" size="9" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Ustanova]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="296" y="4" width="83" height="20" uuid="1c3c2c57-ae88-499a-9db4-2281ebaf4aed"/>
+				<textElement>
+					<font fontName="SansSerif" size="9" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Svojstvo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="473" y="3" width="63" height="20" uuid="07606918-b7e9-4f9e-abe9-35c589751ab5"/>
+				<textElement>
+					<font fontName="SansSerif" size="9" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Do]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="281" y="8" width="8" height="15" uuid="4f1d2861-9573-434d-a461-d81feeb1c3b9"/>
+				<textElement>
+					<font fontName="Verdana" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{podaci_o_dodatnoj_sluzbi_naziv_zupe}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="24" splitType="Stretch">
+			<textField>
+				<reportElement x="12" y="6" width="48" height="15" uuid="f1c55650-b0f8-4e57-b207-512091070c7c"/>
+				<textElement>
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{podaci_o_dodatnoj_sluzbi_rbr}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="71" y="6" width="98" height="15" uuid="15de37ee-5563-4d85-8e68-73f741caea3a"/>
+				<textElement>
+					<font fontName="SansSerif" size="9" pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{podaci_o_dodatnoj_sluzbi_mesto_sluzbe}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="171" y="6" width="124" height="15" uuid="51745353-ceec-4789-99a3-9551f3df0f94"/>
+				<textElement>
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{podaci_o_dodatnoj_sluzbi_naziv_ustanove}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd.MM.yyyy." isBlankWhenNull="true">
+				<reportElement x="409" y="6" width="63" height="15" uuid="73e1feda-e4c2-433c-b0ab-3e533d29bb77"/>
+				<textElement>
+					<font fontName="SansSerif" size="9" isBold="false" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{podaci_o_dodatnoj_sluzbi_pocetak_sluzbe_od}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd.MM.yyyy." isBlankWhenNull="true">
+				<reportElement x="472" y="6" width="64" height="15" uuid="ac7b12ba-32d1-44b2-ac62-311894a4a0ea"/>
+				<textElement>
+					<font fontName="SansSerif" size="9" isBold="false" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{podaci_o_dodatnoj_sluzbi_trajanje_sluzbe_do}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="295" y="6" width="100" height="15" uuid="4417f780-9e17-48a2-bfda-b3533f3ef319"/>
+				<textElement>
+					<font fontName="SansSerif" size="9" pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{podaci_o_dodatnoj_sluzbi_svojstvo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+</jasperReport>

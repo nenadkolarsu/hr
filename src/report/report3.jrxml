@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report3" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c9a897ee-2251-40bb-81dd-a7963473a1f0">
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     licni_podaci.`id` AS licni_podaci_id,
+     licni_podaci.`jmbg` AS licni_podaci_jmbg,
+     licni_podaci.`ime` AS licni_podaci_ime,
+     licni_podaci.`prezime` AS licni_podaci_prezime,
+     podaci_o_pastoralnoj_sluzbi.`mesto_sluzbe` AS podaci_o_pastoralnoj_sluzbi_mesto_sluzbe,
+     podaci_o_pastoralnoj_sluzbi.`naziv_zupe` AS podaci_o_pastoralnoj_sluzbi_naziv_zupe,
+     podaci_o_pastoralnoj_sluzbi.`svojstvo` AS podaci_o_pastoralnoj_sluzbi_svojstvo,
+     podaci_o_pastoralnoj_sluzbi.`dekret` AS podaci_o_pastoralnoj_sluzbi_dekret,
+     podaci_o_pastoralnoj_sluzbi.`pocetak_sluzbe_od` AS podaci_o_pastoralnoj_sluzbi_pocetak_sluzbe_od,
+     podaci_o_pastoralnoj_sluzbi.`trajanje_sluzbe_do` AS podaci_o_pastoralnoj_sluzbi_trajanje_sluzbe_do,
+     licni_podaci.`oslovljavanje` AS licni_podaci_oslovljavanje,
+     licni_podaci.`akademska_titula` AS licni_podaci_akademska_titula,
+     licni_podaci.`crkvena_titula` AS licni_podaci_crkvena_titula
+FROM
+     `podaci_o_pastoralnoj_sluzbi` podaci_o_pastoralnoj_sluzbi INNER JOIN `licni_podaci` licni_podaci ON podaci_o_pastoralnoj_sluzbi.`user_id` = licni_podaci.`id`]]>
+	</queryString>
+	<field name="licni_podaci_id" class="java.lang.Integer"/>
+	<field name="podaci_o_pastoralnoj_sluzbi_mesto_sluzbe" class="java.lang.String"/>
+	<field name="podaci_o_pastoralnoj_sluzbi_naziv_zupe" class="java.lang.String"/>
+	<field name="podaci_o_pastoralnoj_sluzbi_svojstvo" class="java.lang.String"/>
+	<field name="podaci_o_pastoralnoj_sluzbi_dekret" class="java.lang.String"/>
+	<field name="podaci_o_pastoralnoj_sluzbi_pocetak_sluzbe_od" class="java.sql.Date"/>
+	<field name="podaci_o_pastoralnoj_sluzbi_trajanje_sluzbe_do" class="java.sql.Date"/>
+	<group name="licni_podaci_id">
+		<groupExpression><![CDATA[$F{licni_podaci_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

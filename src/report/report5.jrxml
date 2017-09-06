@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report5" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9a598eb9-eaa9-4164-a8eb-337312bd0e3d">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="77"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString>
+		<![CDATA[SELECT
+     zupa.`id` AS zupa_id,
+     zupa.`sifra` AS zupa_sifra,
+     zupa.`naziv` AS zupa_naziv,
+     zupa.`arhiprezbiterat` AS zupa_arhiprezbiterat,
+     zupa.`dekanat` AS zupa_dekanat,
+     zupa.`adresa` AS zupa_adresa,
+     zupa.`mesto` AS zupa_mesto,
+     zupa.`ptt_broj` AS zupa_ptt_broj,
+     licni_podaci.`id` AS licni_podaci_id,
+     podaci_o_pastoralnoj_sluzbi.`user_id` AS podaci_o_pastoralnoj_sluzbi_user_id,
+     licni_podaci.`ime` AS licni_podaci_ime,
+     licni_podaci.`prezime` AS licni_podaci_prezime,
+     podaci_o_pastoralnoj_sluzbi.`svojstvo` AS podaci_o_pastoralnoj_sluzbi_svojstvo,
+     podaci_o_pastoralnoj_sluzbi.`dekret` AS podaci_o_pastoralnoj_sluzbi_dekret,
+     podaci_o_pastoralnoj_sluzbi.`pocetak_sluzbe_od` AS podaci_o_pastoralnoj_sluzbi_pocetak_sluzbe_od,
+     podaci_o_pastoralnoj_sluzbi.`trajanje_sluzbe_do` AS podaci_o_pastoralnoj_sluzbi_trajanje_sluzbe_do,
+     podaci_o_pastoralnoj_sluzbi.`aktivan` AS podaci_o_pastoralnoj_sluzbi_aktivan,
+     licni_podaci.`aktivan` AS licni_podaci_aktivan
+FROM
+     `podaci_o_pastoralnoj_sluzbi` podaci_o_pastoralnoj_sluzbi INNER JOIN `zupa` zupa ON podaci_o_pastoralnoj_sluzbi.`naziv_zupe` = zupa.`naziv`
+     INNER JOIN `licni_podaci` licni_podaci ON podaci_o_pastoralnoj_sluzbi.`user_id` = licni_podaci.`id`
+WHERE
+     podaci_o_pastoralnoj_sluzbi.`aktivan` = 1 AND licni_podaci.`aktivan` = 1
+ORDER BY
+     zupa_id ASC,
+     podaci_o_pastoralnoj_sluzbi_pocetak_sluzbe_od ASC]]>
+	</queryString>
+	<field name="zupa_id" class="java.lang.Integer"/>
+	<field name="zupa_sifra" class="java.lang.String"/>
+	<field name="zupa_naziv" class="java.lang.String"/>
+	<field name="zupa_arhiprezbiterat" class="java.lang.String"/>
+	<field name="zupa_dekanat" class="java.lang.String"/>
+	<field name="zupa_adresa" class="java.lang.String"/>
+	<field name="zupa_mesto" class="java.lang.String"/>
+	<field name="zupa_ptt_broj" class="java.lang.String"/>
+	<field name="licni_podaci_id" class="java.lang.Integer"/>
+	<field name="podaci_o_pastoralnoj_sluzbi_user_id" class="java.lang.Integer"/>
+	<field name="licni_podaci_ime" class="java.lang.String"/>
+	<field name="licni_podaci_prezime" class="java.lang.String"/>
+	<field name="podaci_o_pastoralnoj_sluzbi_svojstvo" class="java.lang.String"/>
+	<field name="podaci_o_pastoralnoj_sluzbi_dekret" class="java.lang.String"/>
+	<field name="podaci_o_pastoralnoj_sluzbi_pocetak_sluzbe_od" class="java.sql.Date"/>
+	<field name="podaci_o_pastoralnoj_sluzbi_trajanje_sluzbe_do" class="java.sql.Date"/>
+	<field name="podaci_o_pastoralnoj_sluzbi_aktivan" class="java.lang.Boolean"/>
+	<group name="zupa_id">
+		<groupExpression><![CDATA[$F{zupa_id}]]></groupExpression>
+		<groupHeader>
+			<band height="40">
+				<textField>
+					<reportElement style="SubTitle" x="47" y="13" width="37" height="15" forecolor="#000000" uuid="7c3b50be-3150-4247-832e-acba1a4ba143"/>
+					<textElement>
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{zupa_id}]]></textFieldExpression>
+				</textField>
+				<rectangle>
+					<reportElement mode="Opaque" x="0" y="13" width="14" height="15" forecolor="#CCCCCC" backcolor="#CCCCCC" uuid="370a05c0-b6b6-4b87-9007-15cd66c8ab08"/>
+				</rectangle>
+				<textField>
+					<reportElement style="Detail" x="95" y="13" width="164" height="15" uuid="24e66e50-3f5d-4d49-8016-39358c5d44fe"/>
+					<textElement>
+						<font size="10" pdfEncoding="Cp1250"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{zupa_naziv}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Detail" x="270" y="13" width="148" height="15" uuid="8bf5544d-cedb-4d90-862d-937acc13db1a"/>
+					<textElement>
+						<font size="10" pdfEncoding="Cp1250"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{zupa_adresa}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Detail" x="418" y="13" width="128" height="15" uuid="632afdcd-3328-4c34-a27a-5d536fc0d8a5"/>
+					<textElement>
+						<font size="10" pdfEncoding="Cp1250"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{zupa_mesto}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="6"/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="148" height="64" uuid="8d41518f-e747-4e11-98e7-f9d3578da160"/>
+				<imageExpression><![CDATA["C:\\gui\\images\\grb100x75.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="190" y="12" width="197" height="20" uuid="4cf18a32-f5b9-4fcc-9269-c2567d40a3b7"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" pdfEncoding="Cp1250"/>
+				</textElement>
+				<text><![CDATA[Pastoralne službe po župama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="187" y="37" width="238" height="18" uuid="1eebbd75-ed3d-4466-9db4-d74015fe52af"/>
+				<textElement>
+					<font size="12" pdfEncoding="Cp1250"/>
+				</textElement>
+				<text><![CDATA[Pregled službe svećenika po župama]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="ca228068-4561-4cd3-bcd6-57d101872a54"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="38" y="19" width="58" height="15" uuid="77d65e53-607c-425d-ac95-b2aa1e5be5c8"/>
+				<text><![CDATA[Prezime]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="126" y="19" width="71" height="15" uuid="3d852f43-1206-4bde-9498-f6d17cfadd4d"/>
+				<text><![CDATA[Ime]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="240" y="19" width="59" height="15" uuid="08788a87-a912-4990-987d-f1493f43ee95"/>
+				<text><![CDATA[Svojstvo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="334" y="19" width="42" height="15" uuid="1fa118c0-ba9a-433d-b573-6fb5c7546201"/>
+				<text><![CDATA[Dekret]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="431" y="19" width="42" height="15" uuid="def0e52b-56f7-42fc-a178-5040e900703d"/>
+				<text><![CDATA[Od]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="504" y="19" width="42" height="15" uuid="9f096bc6-7590-449e-9296-6506708256a1"/>
+				<text><![CDATA[Do]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="1626c418-858a-46ca-9294-73335ecadb9a"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="6" y="1" width="20" height="15" uuid="09c11d24-8ae0-4a1d-8156-8dac534ab13a"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{podaci_o_pastoralnoj_sluzbi_user_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="33" y="1" width="81" height="15" uuid="2c51f0ff-391b-4407-b17f-af7276ce1bea"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{licni_podaci_prezime}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="240" y="1" width="92" height="15" uuid="d538e1c2-15b4-4560-a025-37879870bffd"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{podaci_o_pastoralnoj_sluzbi_svojstvo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="332" y="1" width="97" height="15" uuid="3cc10ef1-e411-4ae5-ac57-676397f9cb22"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{podaci_o_pastoralnoj_sluzbi_dekret}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd.MM.yyyy">
+				<reportElement style="Detail" x="429" y="1" width="52" height="15" uuid="14c64012-56bf-4e31-b491-c21c2f39b4c5"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{podaci_o_pastoralnoj_sluzbi_pocetak_sluzbe_od}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd.MM.yyyy">
+				<reportElement style="Detail" x="495" y="1" width="55" height="15" uuid="59028fe4-5f85-4807-8ec2-cd926e32ef70"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{podaci_o_pastoralnoj_sluzbi_trajanje_sluzbe_do}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="116" y="1" width="116" height="15" uuid="aad79768-0e0b-418b-a520-121afda1617b"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{licni_podaci_ime}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="6aed05ff-9772-426e-b17b-95f074038df4"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="2594aa61-9bbb-4e2a-b230-6a0b7a88bff1"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Strana "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="054707b6-b727-4225-a263-0d59f8e8edc1"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd.MM.yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="16803e4b-449c-4db2-b794-cb657b536843"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

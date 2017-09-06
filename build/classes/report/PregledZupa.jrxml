@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="PregledZupa" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9026907d-da36-484f-b466-0204e3237cb6">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     zupa.`id` AS zupa_id,
+     zupa.`sifra` AS zupa_sifra,
+     zupa.`naziv` AS zupa_naziv,
+     zupa.`arhiprezbiterat` AS zupa_arhiprezbiterat,
+     zupa.`dekanat` AS zupa_dekanat,
+     zupa.`oslovljavanje` AS zupa_oslovljavanje,
+     zupa.`adresa` AS zupa_adresa,
+     zupa.`ptt_broj` AS zupa_ptt_broj,
+     zupa.`mesto` AS zupa_mesto,
+     zupa.`datum_vreme` AS zupa_datum_vreme,
+     zupa.`aktivan` AS zupa_aktivan
+FROM
+     `zupa` zupa]]>
+	</queryString>
+	<field name="zupa_id" class="java.lang.Integer"/>
+	<field name="zupa_sifra" class="java.lang.String"/>
+	<field name="zupa_naziv" class="java.lang.String"/>
+	<field name="zupa_arhiprezbiterat" class="java.lang.String"/>
+	<field name="zupa_dekanat" class="java.lang.String"/>
+	<field name="zupa_oslovljavanje" class="java.lang.String"/>
+	<field name="zupa_adresa" class="java.lang.String"/>
+	<field name="zupa_ptt_broj" class="java.lang.String"/>
+	<field name="zupa_mesto" class="java.lang.String"/>
+	<field name="zupa_datum_vreme" class="java.sql.Timestamp"/>
+	<field name="zupa_aktivan" class="java.lang.Boolean"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="18" y="2" width="100" height="20" uuid="63186570-0a1a-4948-96b7-634e81f34cf0"/>
+				<text><![CDATA[zupa_id]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="51d62e8c-a2e9-4664-afac-c0540711ad91"/>
+				<textFieldExpression><![CDATA[$F{zupa_id}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
