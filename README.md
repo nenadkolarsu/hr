@@ -1,6 +1,5 @@
-# hr
+# Retail module, Human resource evicence
 Java Swing, MySQL, JasperReports
-PERSONNEL RECORDS 
 
 Application is a personnel records with specific features. Consist of several modules that provide update information for the person (Table contains about 110 enteties) and all accompanying tables, reports. 
 
